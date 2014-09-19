@@ -1,0 +1,4 @@
+_site/*
+Gemfile.lock
+run.sh
+update.sh
