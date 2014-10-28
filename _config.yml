@@ -11,8 +11,6 @@ title:            Pedro Matias
 description:      ''
 baseurl:          /
 
-paginate:         5
-
 # Custom vars
 github:           https://github.com/zydeon
 linkedin:         https://www.linkedin.com/in/pamatias
