@@ -1,20 +1,36 @@
 ---
 layout: page
 title: Research
+category: /
 ---
 
 ## Now
 
 Currently I'm working on:
 
-* Master's thesis: [Non-preemptive speed-scaling problem on multiple machines]({{ site.url }}/public/thesis.pdf)
-* NNart project
+{% for p in site.pages %}
+  {% if p.category == "research" and p.now %}
+    {% if p.description == null %}
+* {{ p.content }}
+    {% else %}
+* [{{ p.title }}]({{ p.url }}): {{ p.description }}
+    {% endif %}
+  {% endif %}
+{% endfor %}
 
 ## Past
 
 Following is a list of the projects I worked in the past:
 
-* MultiObjective Sequence Alignment - [MOSAL](http://mosal.dei.uc.pt)
+{% for p in site.pages %}
+  {% if p.category == "research" and p.now == null %}
+    {% if p.description == null %}
+* {{ p.content }}
+    {% else %}
+* [{{ p.title }}]({{ p.url }}): {{ p.description }}
+    {% endif %}
+  {% endif %}
+{% endfor %}
 
 ### Publications
 

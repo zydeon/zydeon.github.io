@@ -7,7 +7,7 @@ Welcome to my personal website. I'm currently a Computer Science student at [Cha
 
 My main interests are algorithms and mathematics. I'm also a big fan of functional programming.
 
-Check out what I've been doing in [{{ site.url }}/development](/development) and [{{ site.url }}/research](/research).
+Check out what I've been doing both in [development](/development) and [research](/research).
 
 ### Contact
 
