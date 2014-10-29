@@ -25,7 +25,7 @@ A social network application with integration with Facebook __REST__ API and upd
 
 The application uses 2 servers and 3 types of client: TCP, RMI (Remote Method Invocation, and HTTP. See the diagram below.
 
-![](/screenshots/architecture.png)
+![](https://raw.githubusercontent.com/zydeon/socnetsd/master/screenshots/architecture.png)
 
 ## Pre-requisites
 
