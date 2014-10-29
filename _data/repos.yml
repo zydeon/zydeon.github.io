@@ -1,18 +1,9 @@
 - name: tictactoe
-
 - name: socnetsd
-
-- name: socnet
-
-- name: socnetes
-
+# - name: socnet
+# - name: socnetes
 - name: qccompiler
-
-- name: mosal
-
+# - name: mosal
 - name: PeMo
-
 - name: fglext
-
 - name: CoimbraTechScene
-
