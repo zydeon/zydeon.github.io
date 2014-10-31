@@ -16,13 +16,20 @@
 
   <!-- Enable jQuery -->
   <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-  <!-- All links outside open in new tab -->
+  <!-- Setup initial events -->
   <script>
     $(document).ready(function(){
+      <!-- All links outside open in new tab -->
       $(document.links).filter(function() {
         return this.hostname != window.location.hostname;
-      }).attr('target', '_blank');      
-    })
+      }).attr('target', '_blank');
+
+      <!-- Scroll to title if design for mobile devices -->
+      var gap = 20;
+      $('html, body').animate({
+          scrollTop: $(".page-title").offset().top - gap + 'px'
+        });
+        })
   </script>
 
   <!-- CSS -->
