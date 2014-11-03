@@ -7,13 +7,13 @@
       </a>
       <p class="lead">
         <a href="{{ site.github }}">
-          <img class="icon" src="{{ site.url }}/public/icons/github.png">
+          <img class="icon" src="{{ site.images }}/icons/github.png">
         </a> &nbsp;
         <a href="{{ site.linkedin }}">
-          <img class="icon" src="{{ site.url }}/public/icons/linkedin.png">
+          <img class="icon" src="{{ site.images }}/icons/linkedin.png">
         </a> &nbsp;
         <a href="mailto:{{ site.email }}" target="_top">
-          <img class="icon" src="{{ site.url }}/public/icons/email.png">
+          <img class="icon" src="{{ site.images }}/icons/email.png">
         </a>
       </p>
     </div>
@@ -21,10 +21,8 @@
     <nav class="sidebar-nav">
       <a class="sidebar-nav-item{% if page.url == "/" %} active{% endif %}" href="/">Home</a>
       {% for p in site.pages %}
-        {% if p.category == "/" %}
-          {% if p.layout == "page" %}
-            <a class="sidebar-nav-item{% if page.url == p.url %} active{% endif %}" href="{{ p.url }}">{{ p.title }}</a>
-          {% endif %}
+        {% if p.category == "/" and p.layout == "page" %}
+          <a class="sidebar-nav-item{% if page.url == p.url %} active{% endif %}" href="{{ p.url }}">{{ p.title }}</a>
         {% endif %}
       {% endfor %}
     </nav>

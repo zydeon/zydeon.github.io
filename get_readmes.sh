@@ -12,5 +12,5 @@ for r in $list; do
       sed -e "s/\/\(screenshots\/.*\.[a-z]*\)/$url_escaped\/$r\/master\/\1/g")
 
   # create file
-  echo "---\nlayout: page\n---\n$md" > $r/index.md
+  echo "---\nlayout: page\n---\n$md" > $r/README.md
 done

@@ -1,7 +1,7 @@
 # Dependencies
 markdown:         kramdown
-# kramdown:
-  # input: GFM
+# redcarpet:        
+#   extensions: ["tables"]
 highlighter:      pygments
 
 # Permalinks
@@ -16,17 +16,21 @@ description:      ''
 github:           https://github.com/zydeon
 linkedin:         https://www.linkedin.com/in/pamatias
 email:            me@pedromatias.me
-
+images:           /assets
+css:              /assets/css
+project_images:   /assets/projects
 
 # defaults
 defaults:
   -
     scope:
-      path: "research/projects" # an empty string here means all files in the project
+      path: "research"
+      type: "posts"
     values:
       category: "research"
   -
     scope:
-      path: "development/projects" # an empty string here means all files in the project
+      path: "development"
+      type: "posts"
     values:
       category: "development"
