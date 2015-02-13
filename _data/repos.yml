@@ -1,9 +1,1 @@
-- name: tictactoe
-- name: socnetsd
-# - name: socnet
-# - name: socnetes
-- name: qccompiler
-# - name: mosal
-- name: PeMo
-- name: fglext
-- name: CoimbraTechScene
+# put data there
