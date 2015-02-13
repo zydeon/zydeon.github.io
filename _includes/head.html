@@ -14,37 +14,24 @@
   <!-- Enable responsiveness on mobile devices-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  <!-- jQuery -->
+  <!-- Enable jQuery -->
   <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-  <!-- Bootstrap modals -->
-  <link href="{{ site.css }}/modal.css" rel="stylesheet">
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-
-
-  <!-- Setup initial events -->
+  <!-- All links outside open in new tab -->
   <script>
     $(document).ready(function(){
-      // All links outside open in new tab
       $(document.links).filter(function() {
         return this.hostname != window.location.hostname;
-      }).attr('target', '_blank');
-
-      // Scroll to title if design for mobile devices
-      var top = $(".page-title").offset().top,
-          gap = 20;
-      if(top > 100){
-        $('html, body').animate({scrollTop:  top - gap + 'px' });
-      }
-    });
+      }).attr('target', '_blank');      
+    })
   </script>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="{{ site.css }}/poole.css">
-  <link rel="stylesheet" href="{{ site.css }}/syntax.css">
-  <link rel="stylesheet" href="{{ site.css }}/hyde.css">
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
 
   <!-- Icons -->
-  <link rel="shortcut icon" href="{{ site.images }}/icons/favicon.ico?v=2">
+  <link rel="shortcut icon" href="/public/icons/favicon.ico?v=2">
 
 </head>
