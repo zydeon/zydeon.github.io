@@ -14,6 +14,4 @@ Following is a list of the projects I've been working up until now (or just main
 
 {% for p in site.pages %}
   {% if p.category == "development"%}
-* [{{ p.name }}](projects/{{ p.name }})
-  {% endif %}
-{% endfor %}
+* [{{ p.title }}]({{ p.url }}){% endif %}{% endfor %}

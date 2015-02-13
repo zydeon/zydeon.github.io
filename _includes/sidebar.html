@@ -23,7 +23,8 @@
       {% for p in site.pages %}
         {% if p.category == "/" %}
           {% if p.layout == "page" %}
-            <a class="sidebar-nav-item{% if page.url == p.url %} active{% endif %}" href="{{ p.url }}">{{ p.title }}</a>
+            {% assign title = p.title | downcase %}
+            <a class="sidebar-nav-item{% if page.url contains title %} active{% endif %}" href="{{ p.url }}">{{ p.title }}</a>
           {% endif %}
         {% endif %}
       {% endfor %}
