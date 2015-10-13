@@ -6,12 +6,10 @@ category: /
 
 ## Now
 
-* Implementation of some ideas from the research project on [Neural Network art](/research/projects/nnart).
+Currently, I am focusing on doing [research](../research) in Algorithms and Complexity Theory. 
+I do write some code, when I have some time to solve [HackerRank](https://hackerrank.com) challenges.
 
 ## Past
 
-Following is a list of the projects I've been working up until now (or just maintaining). Most of them were school projects done during my Bachelor's programme at [University of Coimbra](http://www.uc.pt).
-
-{% for p in site.pages %}
-  {% if p.category == "development"%}
-* [{{ p.title }}]({{ p.url }}){% endif %}{% endfor %}
+{% for p in site.pages %}{% if p.category == "development"%}* [{{ p.title }}]({{ p.url }})
+{% endif %}{% endfor %}

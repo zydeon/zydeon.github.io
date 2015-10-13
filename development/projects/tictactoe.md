@@ -3,15 +3,10 @@ layout: page
 title: Tic-Tac-Toe
 ---
 
-Implementation from scratch of tic-tac-toe in a 3D world.  
-__Frameworks:__ OpenGL (C++)
+Implementation from scratch of Tic-Tac-Toe in a 3D environment.
 
-## Usage
-```
-$ git clone git@github.com:zydeon/tictactoe.git
-$ cd tictactoe
-$ make
-```
+__Frameworks:__ OpenGL  
+__Language:__  C++
 
 ### Keys
 
@@ -34,3 +29,9 @@ For playing in the board:
 ![](https://raw.githubusercontent.com/zydeon/tictactoe/master/screenshots/1.png)
 
 ![](https://raw.githubusercontent.com/zydeon/tictactoe/master/screenshots/2.png)
+
+## Installation
+
+    $ git clone git@github.com:zydeon/tictactoe.git
+    $ cd tictactoe
+    $ make
