@@ -22,7 +22,7 @@ Check out what I've been doing under [development](/development) and [research](
     </label>
     <label>
         <span>Subject</span><div>
-            <input placeholder="Subject" type="email" tabindex="2" required name="_subject">
+            <input placeholder="Subject" type="text" tabindex="2" required name="_subject">
         </div>
     </label>
     <label>
