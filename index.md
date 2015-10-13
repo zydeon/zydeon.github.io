@@ -9,7 +9,7 @@ My main interests are algorithms and mathematics. I'm also a big fan of function
 
 Check out what I've been doing under [development](/development) and [research](/research).
 
-<form action="http://formspree.io/contact@pedromatias.me" method="post">
+<form action="http://formspree.io/pedro@pmatias.com" method="post">
     <h3>Get in touch</h3>
     <hr>
     <label>
