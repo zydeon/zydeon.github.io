@@ -69,6 +69,7 @@ html {
 div.sidebar-profile-pic {
   background-image: url('/public/profile.jpg');
   background-position: right center;
+  border: 2px solid #4D4D4D;
   border-radius: 50%;
   background-size:cover;
   margin: 1em auto;  
