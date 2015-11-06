@@ -6,7 +6,7 @@ category: /
 
 ## Now
 
-Currently, I am focusing on doing [research](../research) in Algorithms and Complexity Theory. 
+Currently, I am focused on doing [research](../research) in Algorithms and Complexity Theory. 
 I do write some code, when I have some time to solve [HackerRank](https://hackerrank.com) challenges.
 
 ## Past
