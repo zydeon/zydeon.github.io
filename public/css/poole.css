@@ -156,7 +156,7 @@ code {
   padding: .25em .5em;
   font-size: 85%;
   color: #bf616a;
-  background-color: #fff;
+  /*background-color: #fff;*/
   border-radius: 3px;
 }
 pre {
@@ -170,7 +170,7 @@ pre {
   white-space: pre-wrap;
   word-break: break-all;
   word-wrap: break-word;
-  background-color: #fff;
+  background-color: #F0F0F0;
 }
 pre code {
   padding: 0;
@@ -229,9 +229,9 @@ blockquote p:last-child {
 
 img {
   display: block;
-  max-width: 100%;
-  margin: 0 0 1rem;
-  border-radius: 5px;
+  /*max-width: 100%;*/
+  margin: 0 auto;
+  border-radius: 10px;
 }
 
 /* Tables */
