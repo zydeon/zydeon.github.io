@@ -52,7 +52,7 @@ html {
 }
 @media (max-width: 48em) {
   .sidebar p.copyright{
-    font-size: 13px;
+    font-size: 60%;
   }
 }
 @media (min-width: 48em) {
@@ -63,6 +63,22 @@ html {
     bottom: 0;
     width: 22rem;
   }
+}
+
+/* Side bar bottom rule */
+.sidebar .sidebar-bottom-rule{
+  margin: 40px inherit;
+}
+@media (min-width: 48em) {
+  .sidebar .sidebar-bottom-rule{
+    display: none;
+  }
+}
+
+/* Side bar nav rule */
+.sidebar .sidebar-nav-rule{
+  margin: 15px inherit;
+  width: 60%;
 }
 
 /* Sidebar links */
@@ -124,6 +140,7 @@ img.icon {
 }
 @media (min-width: 48em) {
   .sidebar-nav-item {
+    padding: 0;
     display: block;
     line-height: 1.75;
   }
@@ -159,13 +176,15 @@ a.sidebar-nav-item:focus {
  */
 
 .content {
-  padding-top:    0rem;
+  margin-top:    4rem;
+  padding-top:   1rem;
   padding-bottom: 4rem;
 }
 
 @media (min-width: 48em) {
   .content {
-    padding-top  : 4rem;
+    margin-top   : 3rem;
+    padding-top  : 0rem;
     max-width    : 38rem;
     margin-left  : 20rem;
     margin-right : 2rem;

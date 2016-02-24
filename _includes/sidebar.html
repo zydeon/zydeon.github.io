@@ -5,7 +5,7 @@
         <div class="sidebar-profile-pic"></div>
         <h1>{{ site.title }}</h1>
       </a>
-      <p class="lead">
+      <div class="sidebar-icons">
         <a href="{{ site.github }}">
           <img class="icon" src="{{ site.url }}/public/icons/github.png">
         </a> &nbsp;
@@ -18,12 +18,13 @@
         <a href="{{ site.hackerrank }}" target="_top">
           <img class="icon" src="{{ site.url }}/public/icons/hackerrank.png">
         </a>
-      </p>
+      </div>
     </div>
-
+    <hr class="sidebar-nav-rule gradient gradient-blue">
     <nav class="sidebar-nav">
       <a class="sidebar-nav-item{% if page.url == "/" %} active{% endif %}" href="/">Home</a>
-      {% for p in site.pages %}
+      {% assign sorted_pages = site.pages | sort:"order" %}
+      {% for p in sorted_pages %}
         {% if p.category == "/" %}
           {% if p.layout == "page" %}
             {% assign title = p.title | downcase %}
@@ -34,5 +35,6 @@
     </nav>
 
     <p class="copyright">&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
+
   </div>
 </div>

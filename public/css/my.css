@@ -1,3 +1,15 @@
+hr.gradient{
+  border: 0;
+  height: 1px;
+  margin: 0 auto;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+}
+
+hr.gradient-blue{
+  background-image: linear-gradient(to right, rgba(38, 139, 210, 0), rgba(38, 139, 210, 1.0), rgba(38, 139, 210, 0));
+}
+
+
 form{
   margin: 70px; 50px;
   width: 75%;
@@ -11,13 +23,6 @@ form{
 form h3{
   margin-top: 10px;
   text-align: center;
-}
-
-form hr{
-  margin: 7px 0px;
-  border: 0;
-  height: 1px;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
 }
 
 form label{

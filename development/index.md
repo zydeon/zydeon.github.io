@@ -2,6 +2,7 @@
 layout: page
 title: Development
 category: /
+order: 3
 ---
 
 ## Now
