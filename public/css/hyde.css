@@ -116,6 +116,15 @@ img.icon {
   border-radius: 0px;
 }
 
+img.icon {
+  -webkit-filter: grayscale(20%);
+  filter: grayscale(20%);
+}
+img.icon:hover {
+  -webkit-filter: grayscale(70%);
+  filter: grayscale(70%);  
+}  
+
 /* About section */
 .sidebar-about h1 {
   color: #000;
