@@ -1,3 +1,32 @@
+@font-face {
+  font-family: MuseoSans;
+  src: url(/public/font/MuseoSans-100.otf);
+}
+@font-face {
+  font-family: MuseoSans;
+  src: url(/public/font/MuseoSans-500.otf);
+  font-weight: bold;
+}
+
+html{
+  font: 1rem/1.5 "MuseoSans", sans-serif;
+  /*font: 300 1rem/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;  */
+}
+@media (min-width: 48em) {
+  html {
+    font-size: 16px;
+  }
+}
+@media (min-width: 58em) {
+  html {
+    font-size: 20px;
+  }
+}
+
+body.blog{
+  font-family: "PT Serif", Georgia, "Times New Roman", serif;  
+}
+
 hr.gradient{
   border: 0;
   height: 1px;
