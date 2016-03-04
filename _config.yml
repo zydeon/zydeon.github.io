@@ -19,6 +19,11 @@ github:           https://github.com/zydeon
 linkedin:         https://www.linkedin.com/in/pamatias
 email:            pedro@pmatias.com
 hackerrank:       https://hackerrank.com/zydeon
+navbar:
+  Home:         "/"
+  Blog:         "/blog"
+  Research:     "/research"
+  Development:  "/development"
 
 # Pagination
 paginate:         5

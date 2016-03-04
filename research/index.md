@@ -1,8 +1,6 @@
 ---
 layout: page
 title: Research
-category: /
-order: 2
 ---
 
 ## Now

@@ -22,15 +22,10 @@
     </div>
     <hr class="sidebar-nav-rule gradient gradient-blue">
     <nav class="sidebar-nav">
-      <a class="sidebar-nav-item{% if page.url == "/" %} active{% endif %}" href="/">Home</a>
-      {% assign sorted_pages = site.pages | sort:"order" %}
-      {% for p in sorted_pages %}
-        {% if p.category == "/" %}
-          {% if p.layout == "page" %}
-            {% assign title = p.title | downcase %}
-            <a class="sidebar-nav-item{% if page.url contains title %} active{% endif %}" href="{{ p.url }}">{{ p.title }}</a>
-          {% endif %}
-        {% endif %}
+      {% for p in site.navbar %}
+        {% assign url    = (page.url | split:"/") %}
+        {% assign subdir = url[1] | prepend:"/" %}
+        <a class="sidebar-nav-item{% if subdir == p[1] %} active{% endif %}" href="{{ p[1] }}">{{ p[0] }}</a>
       {% endfor %}
     </nav>
 
