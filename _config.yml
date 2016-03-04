@@ -19,11 +19,13 @@ github:           https://github.com/zydeon
 linkedin:         https://www.linkedin.com/in/pamatias
 email:            pedro@pmatias.com
 hackerrank:       https://hackerrank.com/zydeon
+
+# Navigation
 navbar:
   Home:         "/"
-  Blog:         "http://blog.pmatias.com"
   Research:     "/research"
   Development:  "/development"
+  Blog:         "http://blog.pmatias.com"
 
 
 # defaults

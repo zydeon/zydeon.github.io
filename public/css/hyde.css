@@ -138,8 +138,6 @@ img.icon:hover {
 }
 @media (min-width: 48em) {
   .sidebar-nav {
-    margin-right: 3em;
-    text-align: right;
   }
 }
 
