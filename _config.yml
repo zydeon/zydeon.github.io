@@ -12,7 +12,7 @@ title:            Pedro Matias
 description:      ''
 
 # Plugins
-gems:             ["jekyll-paginate"]
+gems:             []
 
 # Custom vars
 github:           https://github.com/zydeon
@@ -21,13 +21,9 @@ email:            pedro@pmatias.com
 hackerrank:       https://hackerrank.com/zydeon
 navbar:
   Home:         "/"
-  Blog:         "/blog"
+  Blog:         "http://blog.pmatias.com"
   Research:     "/research"
   Development:  "/development"
-
-# Pagination
-paginate:         5
-paginate_path:    "blog/posts/:num"
 
 
 # defaults
