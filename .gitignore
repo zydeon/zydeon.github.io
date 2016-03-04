@@ -1,5 +1,4 @@
 _site/*
 Gemfile.lock
-run.sh
-update.sh
 .sass-cache/*
+.DS_Store
