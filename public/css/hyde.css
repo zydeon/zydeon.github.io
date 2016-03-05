@@ -58,7 +58,7 @@ html {
   .sidebar {
     position: fixed;
     top: 0;
-    left: 0;
+    left: 2rem;
     bottom: 0;
     width: 22rem;
   }
@@ -190,7 +190,7 @@ a.sidebar-nav-item:focus {
 
 @media (min-width: 48em) {
   .content {
-    margin-top   : 3rem;
+    margin-top   : 10rem;
     padding-top  : 0rem;
     max-width    : 34rem;
     margin-left  : 22rem;
@@ -200,6 +200,7 @@ a.sidebar-nav-item:focus {
 
 @media (min-width: 64em) {
   .content {
+    margin-top: 3rem;
     margin-left: 24rem;
     margin-right: 4rem;
   }
