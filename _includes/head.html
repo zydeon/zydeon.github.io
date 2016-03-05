@@ -28,9 +28,15 @@
 
   <!-- Show obfuscated emails -->
   <script>
-    $(".mailto").each(function() {
-        $(this).html( $(this).html().replace("...", "@").replace(/\.\.\./g, ".") );
-        $(this).attr( "href", $(this).attr("href").replace("...", "@").replace(/\.\.\./g, ".") );
+    function show(s){
+      if(s) { return s.replace(/\. \. \./g, ".").replace(": : :", "@"); }
+      return ""
+    }
+    $(document).ready(function(){
+      $("._mailto").each(function() {
+          $(this).html( show($(this).html() ) )
+          $(this).attr( "href", show($(this).attr("href")) );
+      });
     });
   </script>
 

@@ -9,7 +9,6 @@ I like algorithms and mathematics and I'm a big fan of functional programming.
 
 Check out what I've been doing under [development](/development) and [research](/research), or on my [blog](http://blog.pmatias.com).
 
-<!-- {% include contact.html %} -->
 <br>
-<p style="text-align:center;"><b>Get in touch</b><br>
-Feel free to say hi at <a class="mailto" href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+**Get in touch**  
+Feel free to say hi at <a class="_mailto" href="mailto:{{ site.email | obfuscate }}">{{ site.email | obfuscate }}</a>
