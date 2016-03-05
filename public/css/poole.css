@@ -229,7 +229,7 @@ blockquote p:last-child {
 
 img {
   display: block;
-  /*max-width: 100%;*/
+  max-width: 100%;
   margin: 0 auto;
   border-radius: 10px;
 }
@@ -272,6 +272,7 @@ tbody tr:nth-child(odd) th {
  */
 
 .message {
+  text-align:center;
   margin-bottom: 1rem;
   padding: 1rem;
   color: #717171;

@@ -17,7 +17,6 @@
   <!-- Enable jQuery -->
   <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 
-
   <!-- All links outside open in new tab -->
   <script>
     $(document).ready(function(){
@@ -25,6 +24,14 @@
         return this.hostname != window.location.hostname;
       }).attr('target', '_blank');      
     })
+  </script>
+
+  <!-- Show obfuscated emails -->
+  <script>
+    $(".mailto").each(function() {
+        $(this).html( $(this).html().replace("...", "@").replace(/\.\.\./g, ".") );
+        $(this).attr( "href", $(this).attr("href").replace("...", "@").replace(/\.\.\./g, ".") );
+    });
   </script>
 
 

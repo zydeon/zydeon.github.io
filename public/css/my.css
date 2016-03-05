@@ -23,9 +23,20 @@ html{
   }
 }
 
-body.blog{
-  font-family: "PT Serif", Georgia, "Times New Roman", serif;  
+/*
+ * Center divs
+ */
+@media (min-width: 48em) {
+  div.landpage{
+    text-align: center;
+    margin-top: 7rem;
+    margin-left: 2rem;
+    max-width: 26rem;
+  }
 }
+/*
+ * Horizontal rule
+ */
 
 hr.gradient{
   border: 0;
@@ -44,6 +55,9 @@ hr.thick{
 }
 
 
+/*
+ * Contact form 
+ */
 form{
   margin: 70px; 50px;
   width: 75%;
