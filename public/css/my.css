@@ -1,10 +1,9 @@
 /*
- * Container
+ * Simple container
  */
 .simple{
   width: 90%;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 4em auto;
 }
 @media (min-width: 58em) {
   .simple{
