@@ -1,3 +1,17 @@
+/*
+ * Container
+ */
+.simple{
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 58em) {
+  .simple{
+    width: 50%;
+  }
+}
+
 @font-face {
   font-family: MuseoSans;
   src: url(/public/font/MuseoSans-100.otf);
