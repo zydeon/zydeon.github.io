@@ -3,12 +3,8 @@ layout: page
 title: Research
 ---
 
-## Now
 
-* Just finished my [Master's thesis](projects/thesis/)!
-
-## Past
-
+* [Master's thesis](projects/thesis/) in scheduling algorithms
 * [MOSAL](projects/mosal/) -- MultiObjective Sequence Alignment
 * [Neural Network Art](projects/nnart)
 
