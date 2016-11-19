@@ -15,6 +15,7 @@ It's written in C and it compiles input files written in qC, a small subset of t
 
 ## Features of qC
 * use variables and literals of types *character* and *integer* (both with signal)
+* function declarations/calls, with recursion support
 * pointers to variables and literals and to other pointers
 * unidimensional arrays for integers, characters or pointers
 * literals of type *string*
