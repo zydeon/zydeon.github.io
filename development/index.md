@@ -5,7 +5,7 @@ title: Development
 
 ## Now
 
-Currently, I am focused on doing [research](../research) in Algorithms and Complexity Theory, but I also enjoy challenging myself with [HackerRank](https://hackerrank.com) problems.
+Currently, I am focused on doing [research](../research) in Algorithms and Complexity Theory, but most recently I developed my own [database](projects/dbms).
 
 ## Past
 
