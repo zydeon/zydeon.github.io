@@ -156,3 +156,13 @@ form button{
   overflow: auto;
   /*outline:none;*/
 }
+
+/* for image caption. It has to be the case that
+  <p>
+    <img src=image.png>
+    <em> *caption* </em>
+  </p>
+*/
+img + em {
+  font-size:70%;
+}
