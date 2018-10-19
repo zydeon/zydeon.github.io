@@ -24,6 +24,7 @@ hackerrank:       https://hackerrank.com/zydeon
 navbar:
   Home:         "/"
   Academia:     "/academia"
+  Industry:     "/industry"
   Development:  "/development"
   Blog:         "http://blog.pmatias.com"
 
