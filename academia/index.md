@@ -19,6 +19,8 @@ Co-authored:
 
 ### Talks
 
+* **November 2018**. [Tracking Paths](https://www.ics.uci.edu/~theory/269/181116.html).
+University of California, Irvine, CA.
 * **May 2018**. [A Polynomial Sized Kernel for Tracking Paths Problem](https://www.ics.uci.edu/~theory/269/180518.html).
 University of California, Irvine, CA.
 * **January 2018**. [Approximation Schemes for 0-1 Knapsack](https://www.ics.uci.edu/~theory/269/180126.html).
