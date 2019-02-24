@@ -12,7 +12,7 @@ title:            Pedro Matias
 description:      ''
 
 # Plugins
-gems:             []
+plugins:             []
 
 # Custom vars
 github:           https://github.com/zydeon

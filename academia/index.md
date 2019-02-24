@@ -11,14 +11,15 @@ title: Academia
 
 ### Publications
 
-Co-authored:
-
-* M.Abbasi, L. Paquete, A.Liefooghe, M. Pinheiro and P.Matias, [Improvements on bicriteria pairwise sequence alignment: algorithms and applications](http://dx.doi.org/10.1093/bioinformatics/btt098), _Bioinformatics_, 29(8):996-1003, 2013.
+* A. Efrat, D. Eppstein, D. Frishberg, M. Goodrich, S. Kobourov, N. Mamano, P. Matias, V. Polishchuk, [Euclidean TSP, Motorcycle Graphs, and Other New Applications of Nearest-Neighbor Chains](https://arxiv.org/abs/1902.06875), 2019.
+* M.Abbasi, L. Paquete, A.Liefooghe, M. Pinheiro and P. Matias, [Improvements on bicriteria pairwise sequence alignment: algorithms and applications](http://dx.doi.org/10.1093/bioinformatics/btt098), _Bioinformatics_, 29(8):996-1003, 2013.
 * L. Paquete, P. Matias, M. Abbasi, M. Pinheiro, [MOSAL: Software tools for multiobjective sequence alignment](http://dx.doi.org/10.1186/1751-0473-9-2), _Source Code for Biology and Medicine_, 9(2), 2014.
 
 
 ### Talks
 
+* **February 2019**. [Graph Reconstruction and Verification](https://www.ics.uci.edu/~theory/269/190201b.html).
+University of California, Irvine, CA.
 * **November 2018**. [Tracking Paths](https://www.ics.uci.edu/~theory/269/181116.html).
 University of California, Irvine, CA.
 * **May 2018**. [A Polynomial Sized Kernel for Tracking Paths Problem](https://www.ics.uci.edu/~theory/269/180518.html).
