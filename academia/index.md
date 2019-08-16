@@ -5,6 +5,7 @@ title: Academia
 
 ### Publications
 
+* D. Eppstein, M. T. Goodrich, J. A. Liu, P. A. Matias [Tracking Paths in Planar Graphs](https://arxiv.org/abs/1908.05445), 2019.
 * A. Efrat, D. Eppstein, D. Frishberg, M. Goodrich, S. Kobourov, N. Mamano, P. Matias, V. Polishchuk, [Euclidean TSP, Motorcycle Graphs, and Other New Applications of Nearest-Neighbor Chains](https://arxiv.org/abs/1902.06875), 2019.
 * L. Paquete, P. Matias, M. Abbasi, M. Pinheiro, [MOSAL: Software tools for multiobjective sequence alignment](http://dx.doi.org/10.1186/1751-0473-9-2), _Source Code for Biology and Medicine_, 9(2), 2014.
 * M.Abbasi, L. Paquete, A.Liefooghe, M. Pinheiro and P. Matias, [Improvements on bicriteria pairwise sequence alignment: algorithms and applications](http://dx.doi.org/10.1093/bioinformatics/btt098), _Bioinformatics_, 29(8):996-1003, 2013.
