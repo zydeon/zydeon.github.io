@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>3 | Pedro Matias</title>
+    <link>/publication_types/3/</link>
+      <atom:link href="/publication_types/3/index.xml" rel="self" type="application/rss+xml" />
+    <description>3</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 22 Aug 2019 23:39:08 -0700</lastBuildDate>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>3</title>
+      <link>/publication_types/3/</link>
+    </image>
+    
+    <item>
+      <title>Euclidean TSP, Motorcycle Graphs, and Other New Applications of Nearest-Neighbor Chains</title>
+      <link>/publication/nnc/</link>
+      <pubDate>Thu, 22 Aug 2019 23:39:08 -0700</pubDate>
+      <guid>/publication/nnc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tracking Paths in Planar Graphs</title>
+      <link>/publication/tracking/</link>
+      <pubDate>Thu, 22 Aug 2019 23:01:18 -0700</pubDate>
+      <guid>/publication/tracking/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

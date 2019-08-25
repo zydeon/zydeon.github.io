@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>James A. Liu | Pedro Matias</title>
+    <link>/authors/james-a.-liu/</link>
+      <atom:link href="/authors/james-a.-liu/index.xml" rel="self" type="application/rss+xml" />
+    <description>James A. Liu</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 22 Aug 2019 23:01:18 -0700</lastBuildDate>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>James A. Liu</title>
+      <link>/authors/james-a.-liu/</link>
+    </image>
+    
+    <item>
+      <title>Tracking Paths in Planar Graphs</title>
+      <link>/publication/tracking/</link>
+      <pubDate>Thu, 22 Aug 2019 23:01:18 -0700</pubDate>
+      <guid>/publication/tracking/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

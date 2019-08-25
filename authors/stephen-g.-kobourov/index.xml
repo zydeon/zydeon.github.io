@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Stephen G. Kobourov | Pedro Matias</title>
+    <link>/authors/stephen-g.-kobourov/</link>
+      <atom:link href="/authors/stephen-g.-kobourov/index.xml" rel="self" type="application/rss+xml" />
+    <description>Stephen G. Kobourov</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 22 Aug 2019 23:39:08 -0700</lastBuildDate>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>Stephen G. Kobourov</title>
+      <link>/authors/stephen-g.-kobourov/</link>
+    </image>
+    
+    <item>
+      <title>Euclidean TSP, Motorcycle Graphs, and Other New Applications of Nearest-Neighbor Chains</title>
+      <link>/publication/nnc/</link>
+      <pubDate>Thu, 22 Aug 2019 23:39:08 -0700</pubDate>
+      <guid>/publication/nnc/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
