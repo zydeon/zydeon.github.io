@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pairwise sequence alignment | Pedro Matias</title>
+    <link>/tags/pairwise-sequence-alignment/</link>
+      <atom:link href="/tags/pairwise-sequence-alignment/index.xml" rel="self" type="application/rss+xml" />
+    <description>Pairwise sequence alignment</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 01 Jan 2014 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>Pairwise sequence alignment</title>
+      <link>/tags/pairwise-sequence-alignment/</link>
+    </image>
+    
+    <item>
+      <title>MOSAL: Software tools for multiobjective sequence alignment</title>
+      <link>/publication/2013-mosal2/</link>
+      <pubDate>Wed, 01 Jan 2014 00:00:00 +0000</pubDate>
+      <guid>/publication/2013-mosal2/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
