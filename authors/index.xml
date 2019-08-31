@@ -77,6 +77,15 @@
     </item>
     
     <item>
+      <title></title>
+      <link>/authors/admin/</link>
+      <pubDate>Thu, 22 Aug 2019 23:01:18 -0700</pubDate>
+      <guid>/authors/admin/</guid>
+      <description>&lt;p&gt;I am a PhD student in Computer Science at the University of California, Irvine in the &lt;a href=&#34;https://www.ics.uci.edu/~theory/&#34; target=&#34;_blank&#34;&gt;Center for Algorithms and Theory of Computation&lt;/a&gt;. I am pleased to have &lt;a href=&#34;https://www.ics.uci.edu/~goodrich/&#34; target=&#34;_blank&#34;&gt;Prof. Michael Goodrich&lt;/a&gt; as my advisor and to collaborate with &lt;a href=&#34;https://www.ics.uci.edu/~eppstein/&#34; target=&#34;_blank&#34;&gt;Prof. David Eppstein&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>James A. Liu</title>
       <link>/authors/james-a.-liu/</link>
       <pubDate>Thu, 22 Aug 2019 23:01:18 -0700</pubDate>
@@ -122,15 +131,6 @@
       <pubDate>Tue, 01 Jan 2013 00:00:00 +0000</pubDate>
       <guid>/authors/arnaud-liefooghe/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>/authors/admin/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/authors/admin/</guid>
-      <description>&lt;p&gt;I am a PhD student in Computer Science at the University of California, Irvine in the &lt;a href=&#34;https://www.ics.uci.edu/~theory/&#34; target=&#34;_blank&#34;&gt;Center for Algorithms and Theory of Computation&lt;/a&gt;. I am pleased to have &lt;a href=&#34;https://www.ics.uci.edu/~goodrich/&#34; target=&#34;_blank&#34;&gt;Prof. Michael Goodrich&lt;/a&gt; as my advisor and to collaborate with &lt;a href=&#34;https://www.ics.uci.edu/~eppstein/&#34; target=&#34;_blank&#34;&gt;Prof. David Eppstein&lt;/a&gt;.&lt;/p&gt;
-</description>
     </item>
     
   </channel>

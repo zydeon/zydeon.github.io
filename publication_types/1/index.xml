@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Pedro A. Matias | Pedro Matias</title>
-    <link>/authors/pedro-a.-matias/</link>
-      <atom:link href="/authors/pedro-a.-matias/index.xml" rel="self" type="application/rss+xml" />
-    <description>Pedro A. Matias</description>
+    <title>1 | Pedro Matias</title>
+    <link>/publication_types/1/</link>
+      <atom:link href="/publication_types/1/index.xml" rel="self" type="application/rss+xml" />
+    <description>1</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 22 Aug 2019 23:39:08 -0700</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
-      <title>Pedro A. Matias</title>
-      <link>/authors/pedro-a.-matias/</link>
+      <title>1</title>
+      <link>/publication_types/1/</link>
     </image>
     
     <item>
@@ -17,6 +17,14 @@
       <link>/publication/2019-nnc/</link>
       <pubDate>Thu, 22 Aug 2019 23:39:08 -0700</pubDate>
       <guid>/publication/2019-nnc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tracking Paths in Planar Graphs</title>
+      <link>/publication/2019-tracking/</link>
+      <pubDate>Thu, 22 Aug 2019 23:01:18 -0700</pubDate>
+      <guid>/publication/2019-tracking/</guid>
       <description></description>
     </item>
     

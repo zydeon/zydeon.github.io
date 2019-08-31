@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/publication_types/3/</loc>
+    <loc>/publication_types/1/</loc>
     <lastmod>2019-08-22T23:39:08-07:00</lastmod>
   </url>
   
@@ -70,6 +70,11 @@
   <url>
     <loc>/authors/valentin-polishchuk/</loc>
     <lastmod>2019-08-22T23:39:08-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/admin/</loc>
+    <lastmod>2019-08-22T23:01:18-07:00</lastmod>
   </url>
   
   <url>
@@ -140,10 +145,6 @@
   <url>
     <loc>/publication/2013-mosal1/</loc>
     <lastmod>2013-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/authors/admin/</loc>
   </url>
   
   <url>
