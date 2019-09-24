@@ -3,17 +3,57 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/authors/admin/</loc>
+    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication_types/0/</loc>
+    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/2020-reconstruction/</loc>
+    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/</loc>
+    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/michael-t.-goodrich/</loc>
+    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication_types/</loc>
+    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/</loc>
+    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/ramtin-afshar/</loc>
+    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/publication_types/1/</loc>
     <lastmod>2019-08-22T23:39:08-07:00</lastmod>
   </url>
   
   <url>
     <loc>/authors/alon-efrat/</loc>
-    <lastmod>2019-08-22T23:39:08-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/authors/</loc>
     <lastmod>2019-08-22T23:39:08-07:00</lastmod>
   </url>
   
@@ -33,32 +73,12 @@
   </url>
   
   <url>
-    <loc>/authors/michael-t.-goodrich/</loc>
-    <lastmod>2019-08-22T23:39:08-07:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/authors/nil-mamano/</loc>
     <lastmod>2019-08-22T23:39:08-07:00</lastmod>
   </url>
   
   <url>
     <loc>/authors/pedro-a.-matias/</loc>
-    <lastmod>2019-08-22T23:39:08-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/</loc>
-    <lastmod>2019-08-22T23:39:08-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication_types/</loc>
-    <lastmod>2019-08-22T23:39:08-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication/</loc>
     <lastmod>2019-08-22T23:39:08-07:00</lastmod>
   </url>
   
@@ -70,11 +90,6 @@
   <url>
     <loc>/authors/valentin-polishchuk/</loc>
     <lastmod>2019-08-22T23:39:08-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/authors/admin/</loc>
-    <lastmod>2019-08-22T23:01:18-07:00</lastmod>
   </url>
   
   <url>

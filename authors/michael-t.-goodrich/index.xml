@@ -5,12 +5,20 @@
     <link>/authors/michael-t.-goodrich/</link>
       <atom:link href="/authors/michael-t.-goodrich/index.xml" rel="self" type="application/rss+xml" />
     <description>Michael T. Goodrich</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 22 Aug 2019 23:39:08 -0700</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
       <title>Michael T. Goodrich</title>
       <link>/authors/michael-t.-goodrich/</link>
     </image>
+    
+    <item>
+      <title>A Fast and Straightforward Approach for Reconstructing a Bounded Degree Tree</title>
+      <link>/publication/2020-reconstruction/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>/publication/2020-reconstruction/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Euclidean TSP, Motorcycle Graphs, and Other New Applications of Nearest-Neighbor Chains</title>

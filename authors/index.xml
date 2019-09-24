@@ -5,12 +5,37 @@
     <link>/authors/</link>
       <atom:link href="/authors/index.xml" rel="self" type="application/rss+xml" />
     <description>Authors</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 22 Aug 2019 23:39:08 -0700</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
       <title>Authors</title>
       <link>/authors/</link>
     </image>
+    
+    <item>
+      <title></title>
+      <link>/authors/admin/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>/authors/admin/</guid>
+      <description>&lt;p&gt;I am a PhD student in Computer Science at the University of California, Irvine in the &lt;a href=&#34;https://www.ics.uci.edu/~theory/&#34; target=&#34;_blank&#34;&gt;Center for Algorithms and Theory of Computation&lt;/a&gt;. I am pleased to have &lt;a href=&#34;https://www.ics.uci.edu/~goodrich/&#34; target=&#34;_blank&#34;&gt;Prof. Michael Goodrich&lt;/a&gt; as my advisor and to collaborate with &lt;a href=&#34;https://www.ics.uci.edu/~eppstein/&#34; target=&#34;_blank&#34;&gt;Prof. David Eppstein&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Michael T. Goodrich</title>
+      <link>/authors/michael-t.-goodrich/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>/authors/michael-t.-goodrich/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ramtin Afshar</title>
+      <link>/authors/ramtin-afshar/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>/authors/ramtin-afshar/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Alon Efrat</title>
@@ -33,14 +58,6 @@
       <link>/authors/david-eppstein/</link>
       <pubDate>Thu, 22 Aug 2019 23:39:08 -0700</pubDate>
       <guid>/authors/david-eppstein/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Michael T. Goodrich</title>
-      <link>/authors/michael-t.-goodrich/</link>
-      <pubDate>Thu, 22 Aug 2019 23:39:08 -0700</pubDate>
-      <guid>/authors/michael-t.-goodrich/</guid>
       <description></description>
     </item>
     
@@ -74,15 +91,6 @@
       <pubDate>Thu, 22 Aug 2019 23:39:08 -0700</pubDate>
       <guid>/authors/valentin-polishchuk/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>/authors/admin/</link>
-      <pubDate>Thu, 22 Aug 2019 23:01:18 -0700</pubDate>
-      <guid>/authors/admin/</guid>
-      <description>&lt;p&gt;I am a PhD student in Computer Science at the University of California, Irvine in the &lt;a href=&#34;https://www.ics.uci.edu/~theory/&#34; target=&#34;_blank&#34;&gt;Center for Algorithms and Theory of Computation&lt;/a&gt;. I am pleased to have &lt;a href=&#34;https://www.ics.uci.edu/~goodrich/&#34; target=&#34;_blank&#34;&gt;Prof. Michael Goodrich&lt;/a&gt; as my advisor and to collaborate with &lt;a href=&#34;https://www.ics.uci.edu/~eppstein/&#34; target=&#34;_blank&#34;&gt;Prof. David Eppstein&lt;/a&gt;.&lt;/p&gt;
-</description>
     </item>
     
     <item>
