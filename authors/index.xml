@@ -13,19 +13,18 @@
     </image>
     
     <item>
-      <title></title>
-      <link>/authors/admin/</link>
-      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>/authors/admin/</guid>
-      <description>&lt;p&gt;I am a PhD student in Computer Science at the University of California, Irvine in the &lt;a href=&#34;https://www.ics.uci.edu/~theory/&#34; target=&#34;_blank&#34;&gt;Center for Algorithms and Theory of Computation&lt;/a&gt;. I am pleased to have &lt;a href=&#34;https://www.ics.uci.edu/~goodrich/&#34; target=&#34;_blank&#34;&gt;Prof. Michael Goodrich&lt;/a&gt; as my advisor and to collaborate with &lt;a href=&#34;https://www.ics.uci.edu/~eppstein/&#34; target=&#34;_blank&#34;&gt;Prof. David Eppstein&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Michael T. Goodrich</title>
       <link>/authors/michael-t.-goodrich/</link>
       <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
       <guid>/authors/michael-t.-goodrich/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pedro Matias</title>
+      <link>/authors/pedro-matias/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>/authors/pedro-matias/</guid>
       <description></description>
     </item>
     
@@ -66,14 +65,6 @@
       <link>/authors/nil-mamano/</link>
       <pubDate>Thu, 22 Aug 2019 23:39:08 -0700</pubDate>
       <guid>/authors/nil-mamano/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Pedro A. Matias</title>
-      <link>/authors/pedro-a.-matias/</link>
-      <pubDate>Thu, 22 Aug 2019 23:39:08 -0700</pubDate>
-      <guid>/authors/pedro-a.-matias/</guid>
       <description></description>
     </item>
     
@@ -126,19 +117,20 @@
     </item>
     
     <item>
-      <title>Pedro Matias</title>
-      <link>/authors/pedro-matias/</link>
-      <pubDate>Wed, 01 Jan 2014 00:00:00 +0000</pubDate>
-      <guid>/authors/pedro-matias/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Arnaud Liefooghe</title>
       <link>/authors/arnaud-liefooghe/</link>
       <pubDate>Tue, 01 Jan 2013 00:00:00 +0000</pubDate>
       <guid>/authors/arnaud-liefooghe/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/authors/admin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/authors/admin/</guid>
+      <description>&lt;p&gt;I am a PhD student in Computer Science at the University of California, Irvine in the &lt;a href=&#34;https://www.ics.uci.edu/~theory/&#34; target=&#34;_blank&#34;&gt;Center for Algorithms and Theory of Computation&lt;/a&gt;. I am pleased to have &lt;a href=&#34;https://www.ics.uci.edu/~goodrich/&#34; target=&#34;_blank&#34;&gt;Prof. Michael Goodrich&lt;/a&gt; as my advisor and to collaborate with &lt;a href=&#34;https://www.ics.uci.edu/~eppstein/&#34; target=&#34;_blank&#34;&gt;Prof. David Eppstein&lt;/a&gt;.&lt;/p&gt;
+</description>
     </item>
     
   </channel>

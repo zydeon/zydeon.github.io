@@ -3,22 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/authors/admin/</loc>
-    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/publication_types/0/</loc>
     <lastmod>2020-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/publication/2020-reconstruction/</loc>
+    <loc>/authors/</loc>
     <lastmod>2020-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/</loc>
+    <loc>/publication/2020-reconstruction/</loc>
     <lastmod>2020-01-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -29,6 +24,11 @@
   
   <url>
     <loc>/</loc>
+    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/pedro-matias/</loc>
     <lastmod>2020-01-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -74,11 +74,6 @@
   
   <url>
     <loc>/authors/nil-mamano/</loc>
-    <lastmod>2019-08-22T23:39:08-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/authors/pedro-a.-matias/</loc>
     <lastmod>2019-08-22T23:39:08-07:00</lastmod>
   </url>
   
@@ -143,11 +138,6 @@
   </url>
   
   <url>
-    <loc>/authors/pedro-matias/</loc>
-    <lastmod>2014-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tags/</loc>
     <lastmod>2014-01-01T00:00:00+00:00</lastmod>
   </url>
@@ -160,6 +150,10 @@
   <url>
     <loc>/publication/2013-mosal1/</loc>
     <lastmod>2013-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/admin/</loc>
   </url>
   
   <url>
