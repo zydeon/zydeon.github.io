@@ -179,4 +179,8 @@
     <loc>/categories/</loc>
   </url>
   
+  <url>
+    <loc>/projects/qccompiler/</loc>
+  </url>
+  
 </urlset>
