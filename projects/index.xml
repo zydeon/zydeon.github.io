@@ -291,9 +291,42 @@ if __name__ == &#39;__main__&#39;:
     </item>
     
     <item>
+      <title>PeMo</title>
+      <link>/projects/pemo/</link>
+      <pubDate>Sun, 01 Dec 2013 00:00:00 +0000</pubDate>
+      <guid>/projects/pemo/</guid>
+      <description>&lt;p&gt;An XMPP Instant Messaging client &lt;a href=&#34;https://github.com/pontarius/pontarius-xmpp/&#34; target=&#34;_blank&#34;&gt;pontarius-xmpp&lt;/a&gt; using &lt;a href=&#34;http://jtdaugherty.github.io/vty-ui/&#34; target=&#34;_blank&#34;&gt;vty-ui&lt;/a&gt; as user interface. Includes support for Jabber.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Language:&lt;/strong&gt; Haskell&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;Installation&lt;/strong&gt;&lt;br /&gt;
+&lt;code&gt;$ cabal sandbox init&lt;/code&gt;&lt;br /&gt;
+&lt;code&gt;$ cabal install&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Mac OSX:&lt;/strong&gt; In order to install text-icu, you need the C libraries: icuuc, icui18n, icudata
+
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;$ brew install icu4c&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;$ cabal install text-icu --extra-include-dirs=/usr/local/Cellar/icu4c/53.1/include/ --extra-lib-dirs=/usr/local/Cellar/icu4c/53.1/lib&lt;/code&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Or the equivalent using MacPorts.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Usage&lt;/strong&gt;&lt;br /&gt;
+&lt;code&gt;$ cabal configure&lt;/code&gt;&lt;br /&gt;
+&lt;code&gt;$ cabal run&lt;/code&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>qccompiler</title>
       <link>/projects/qccompiler/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
       <guid>/projects/qccompiler/</guid>
       <description>
 
@@ -582,6 +615,46 @@ The result of the compilation is written to the file `result.c&lt;/p&gt;
 &lt;li&gt;flex&lt;/li&gt;
 &lt;li&gt;yacc&lt;/li&gt;
 &lt;li&gt;gcc&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>SocNet</title>
+      <link>/projects/socnet/</link>
+      <pubDate>Sat, 01 Dec 2012 00:00:00 +0000</pubDate>
+      <guid>/projects/socnet/</guid>
+      <description>
+
+&lt;p&gt;A social network application with integration with Facebook &lt;strong&gt;REST&lt;/strong&gt; API and updates in real-time for users social activity, by making use of &lt;strong&gt;WebSockets&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Register user&lt;/li&gt;
+&lt;li&gt;Login user&lt;/li&gt;
+&lt;li&gt;Create a new post (with or without Images)&lt;/li&gt;
+&lt;li&gt;Edit a previous post&lt;/li&gt;
+&lt;li&gt;Delete a previous post&lt;/li&gt;
+&lt;li&gt;Reply to any post&lt;/li&gt;
+&lt;li&gt;Send Direct Messages to other users&lt;/li&gt;
+&lt;li&gt;See online users (automatically updated)&lt;/li&gt;
+&lt;li&gt;Join chatrooms&lt;/li&gt;
+&lt;li&gt;When a post is created, it&amp;rsquo;s created on Facebook.&lt;/li&gt;
+&lt;li&gt;When a post is deleted, it&amp;rsquo;s deleted on Facebook.&lt;/li&gt;
+&lt;li&gt;When a reply is made, it&amp;rsquo;s added on Facebook.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;overall-architecture&#34;&gt;Overall architecture&lt;/h2&gt;
+
+&lt;p&gt;The application uses 2 servers and 3 types of client: TCP, RMI (Remote Method Invocation, and HTTP. See the diagram above.&lt;/p&gt;
+
+&lt;h2 id=&#34;pre-requisites&#34;&gt;Pre-requisites&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;JDBC driver&lt;/li&gt;
+&lt;li&gt;Apache Tomcat&lt;/li&gt;
+&lt;li&gt;WebBrowser with support to websockets&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
