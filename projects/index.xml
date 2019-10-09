@@ -678,6 +678,26 @@ $ make
     </item>
     
     <item>
+      <title>Coimbra TechScene</title>
+      <link>/projects/coimbratechscene/</link>
+      <pubDate>Sat, 01 Dec 2012 00:00:00 +0000</pubDate>
+      <guid>/projects/coimbratechscene/</guid>
+      <description>
+
+&lt;p&gt;Online directory of all of the technology companies situated in Coimbra, Portugal.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Website:&lt;/strong&gt; &lt;a href=&#34;http://coimbratechscene.pt.vu&#34; target=&#34;_blank&#34;&gt;coimbratechscene.pt.vu&lt;/a&gt;&lt;br /&gt;
+&lt;strong&gt;Frameworks:&lt;/strong&gt; &lt;a href=&#34;https://www.djangoproject.com/&#34; target=&#34;_blank&#34;&gt;Django&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;screenshots&#34;&gt;Screenshots&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;screenshot1.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;screenshot2.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>SocNet</title>
       <link>/projects/socnet/</link>
       <pubDate>Sat, 01 Dec 2012 00:00:00 +0000</pubDate>
