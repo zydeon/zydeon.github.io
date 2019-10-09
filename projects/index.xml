@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects | Pedro Matias</title>
+    <link>/projects/</link>
+      <atom:link href="/projects/index.xml" rel="self" type="application/rss+xml" />
+    <description>Projects</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 01 Dec 2017 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>Projects</title>
+      <link>/projects/</link>
+    </image>
+    
+    <item>
+      <title>Rainfall Predictor</title>
+      <link>/projects/rainfall-predictor/</link>
+      <pubDate>Fri, 01 Dec 2017 00:00:00 +0000</pubDate>
+      <guid>/projects/rainfall-predictor/</guid>
+      <description>
+
+&lt;p&gt;Designed and developed supervised Machine Learning models for predicting
+rainfall at a particular location. The project was carried out by 2 awesome
+teammates and myself, in hopes of getting a good grade on &lt;a href=&#34;http://sameersingh.org&#34; target=&#34;_blank&#34;&gt;Prof. Sameer
+Singh&lt;/a&gt;&amp;rsquo;s course of Machine Learning.&lt;/p&gt;
+
+&lt;h2 id=&#34;the-data&#34;&gt;The data&lt;/h2&gt;
+
+&lt;p&gt;Courtesy of the &lt;a href=&#34;http://chrs.web.uci.edu&#34; target=&#34;_blank&#34;&gt;UC Irvine Center for Hydrometeorology and Remote
+Sensing&lt;/a&gt;, our data consisted of satellite-based
+measurements of temperature at particular locations across the globe (infrared
+imaging) and information about clouds (such as area and average temperature).
+Each data point corresponded to a location on the globe (identified by its
+latitude, longitude and elevation) and was labeled with CHRS&amp;rsquo;s belief of whether
+that particular location will admit rain.&lt;/p&gt;
+
+&lt;h2 id=&#34;approaches&#34;&gt;Approaches&lt;/h2&gt;
+
+&lt;p&gt;We tried the following models:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Neural Networks and Deep Learning&lt;/li&gt;
+&lt;li&gt;Random Forests&lt;/li&gt;
+&lt;li&gt;Support Vector Machines&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Random Forests turned out to be the model scoring highest in validation AUC,
+with scores above 0.79. We used hold-out validation with a training fraction of
+80% of the data.&lt;/p&gt;
+
+&lt;p&gt;Experiments were carried out using &lt;code&gt;scikit-learn&lt;/code&gt;&amp;rsquo;s &lt;a href=&#34;https://scikit-learn.org/stable/modules/ensemble.html#forest&#34; target=&#34;_blank&#34;&gt;implementations&lt;/a&gt; of Random
+Forests (both &lt;code&gt;RandomForestRegressor&lt;/code&gt; and &lt;code&gt;ExtraTreesRegressor&lt;/code&gt;) and we
+experimented different configurations of the following parameters (see code at
+&lt;a href=&#34;#random-forests-code&#34;&gt;the end&lt;/a&gt;):&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;max_depth&lt;/code&gt;. The maximum depth on all the decision trees. If &lt;code&gt;None&lt;/code&gt;, the
+depth is unrestricted&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;min_samples_split&lt;/code&gt;. The minimum number of samples to split a node (e.g. minParent)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;min_samples_leaf&lt;/code&gt;. The minimum number of samples to form a leaf&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;max_features&lt;/code&gt;. The maximum size of the subsample of features considered in splitting&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;n_estimators&lt;/code&gt;. The number of decision trees generated&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;bootstrap&lt;/code&gt;. Either True or False. In &lt;code&gt;scikit-learn&lt;/code&gt;, the subsample of the data (drawn with or without replacement) will always have the size as the data itself&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;random-forest-results&#34;&gt;Random Forest Results&lt;/h2&gt;
+
+&lt;p&gt;In the end, an unlimited &lt;code&gt;max_depth&lt;/code&gt; together with small sizes of feature
+subsampling (&lt;code&gt;max_features&lt;/code&gt;=2) and a large number of decision trees
+(&lt;code&gt;n_estimators&lt;/code&gt;=300) turned out to be a very good configuration of params. The
+remaining parameters revealed little influence in validation AUC. See below for
+a plot of training and validation AUC&amp;rsquo;s varying &lt;code&gt;max_features&lt;/code&gt; and
+&lt;code&gt;n_estimators&lt;/code&gt;, with and without &lt;code&gt;bootstrap&lt;/code&gt;.&lt;/p&gt;
+
+&lt;figure&gt;
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;TrueRF.png&#34; data-caption=&#34;RandomForestRegressor with bootstrap, min_samples_split=min_samples_leaf=5 and max_depth=None.&#34;&gt;
+
+&lt;img src=&#34;TrueRF.png&#34; alt=&#34;`RandomForestRegressor` with `bootstrap`, `min_samples_split`=`min_samples_leaf`=5 and `max_depth`=`None`.&#34; &gt;
+&lt;/a&gt;
+
+
+&lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; &gt;
+  
+  &lt;p&gt;
+    &lt;code&gt;RandomForestRegressor&lt;/code&gt; with &lt;code&gt;bootstrap&lt;/code&gt;, &lt;code&gt;min_samples_split&lt;/code&gt;=&lt;code&gt;min_samples_leaf&lt;/code&gt;=5 and &lt;code&gt;max_depth&lt;/code&gt;=&lt;code&gt;None&lt;/code&gt;.
+    
+    
+    
+  &lt;/p&gt; 
+&lt;/figcaption&gt;
+
+&lt;/figure&gt;
+
+&lt;figure&gt;
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;FalseRF.png&#34; data-caption=&#34;RandomForestRegressor without bootstrap, min_samples_split=min_samples_leaf=5 and max_depth=None.&#34;&gt;
+
+&lt;img src=&#34;FalseRF.png&#34; alt=&#34;`RandomForestRegressor` without `bootstrap`, `min_samples_split`=`min_samples_leaf`=5 and `max_depth`=`None`.&#34; &gt;
+&lt;/a&gt;
+
+
+&lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; &gt;
+  
+  &lt;p&gt;
+    &lt;code&gt;RandomForestRegressor&lt;/code&gt; without &lt;code&gt;bootstrap&lt;/code&gt;, &lt;code&gt;min_samples_split&lt;/code&gt;=&lt;code&gt;min_samples_leaf&lt;/code&gt;=5 and &lt;code&gt;max_depth&lt;/code&gt;=&lt;code&gt;None&lt;/code&gt;.
+    
+    
+    
+  &lt;/p&gt; 
+&lt;/figcaption&gt;
+
+&lt;/figure&gt;
+
+&lt;p&gt;The following plots are similar to the ones above, but using
+&lt;code&gt;ExtraTreesRegressor&lt;/code&gt; instead, where in addition to using a random subset of splitting candidate features, it samples a random subsubset from this subset when evaluating the most discriminating splitting feature.&lt;/p&gt;
+
+&lt;figure&gt;
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;TrueExtraRF.png&#34; data-caption=&#34;RandomForestRegressor with bootstrap, min_samples_split=min_samples_leaf=5 and max_depth=None.&#34;&gt;
+
+&lt;img src=&#34;TrueExtraRF.png&#34; alt=&#34;`RandomForestRegressor` with `bootstrap`, `min_samples_split`=`min_samples_leaf`=5 and `max_depth`=`None`.&#34; &gt;
+&lt;/a&gt;
+
+
+&lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; &gt;
+  
+  &lt;p&gt;
+    &lt;code&gt;RandomForestRegressor&lt;/code&gt; with &lt;code&gt;bootstrap&lt;/code&gt;, &lt;code&gt;min_samples_split&lt;/code&gt;=&lt;code&gt;min_samples_leaf&lt;/code&gt;=5 and &lt;code&gt;max_depth&lt;/code&gt;=&lt;code&gt;None&lt;/code&gt;.
+    
+    
+    
+  &lt;/p&gt; 
+&lt;/figcaption&gt;
+
+&lt;/figure&gt;
+
+&lt;figure&gt;
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;FalseExtraRF.png&#34; data-caption=&#34;RandomForestRegressor without bootstrap, min_samples_split=min_samples_leaf=5 and max_depth=None.&#34;&gt;
+
+&lt;img src=&#34;FalseExtraRF.png&#34; alt=&#34;`RandomForestRegressor` without `bootstrap`, `min_samples_split`=`min_samples_leaf`=5 and `max_depth`=`None`.&#34; &gt;
+&lt;/a&gt;
+
+
+&lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; &gt;
+  
+  &lt;p&gt;
+    &lt;code&gt;RandomForestRegressor&lt;/code&gt; without &lt;code&gt;bootstrap&lt;/code&gt;, &lt;code&gt;min_samples_split&lt;/code&gt;=&lt;code&gt;min_samples_leaf&lt;/code&gt;=5 and &lt;code&gt;max_depth&lt;/code&gt;=&lt;code&gt;None&lt;/code&gt;.
+    
+    
+    
+  &lt;/p&gt; 
+&lt;/figcaption&gt;
+
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;random-forests-code&#34;&gt;Random Forests code&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# Consistent behavior
+np.random.seed(0)
+
+def loadData(filename):
+  &amp;quot;&amp;quot;&amp;quot; Load data from binary cache if possible for efficiency. &amp;quot;&amp;quot;&amp;quot;
+  f = os.path.splitext(filename)[0] + &#39;.npy&#39;
+  if os.path.isfile(f):
+    D = np.load(f)   # faster than genfromtxt
+  else:
+    D = np.genfromtxt(filename, delimiter = None)
+    np.save(f, D)
+  return D
+
+def gen_params(**params_ranges):
+  params_ranges = {k: [(k, v) for v in params_ranges[k]] for k in params_ranges}
+  return map(dict, itertools.product(*params_ranges.values()))
+
+
+if __name__ == &#39;__main__&#39;:
+  timestamp = str(int(time.time()))
+
+  # Prepare output folder for results
+  date = datetime.fromtimestamp(time.time()).strftime(&#39;%m-%d_%H-%M-%S&#39;)
+
+  # Data Loading
+  X = loadData(&#39;data/X_train.txt&#39;)
+  Y = loadData(&#39;data/Y_train.txt&#39;)
+  X, Y = ml.shuffleData(X,Y)
+  m, n = X.shape
+
+  Xtr, Xva, Ytr, Yva = ml.splitData(X, Y)
+  Xt, Yt = Xtr, Ytr
+
+  max_depth = [None]
+  min_samples_split = [10]
+  min_samples_leaf = [10]
+  max_features = [2]
+  n_estimators = [100]
+  bootstrap = [True]
+  type = [&#39;RF&#39;]
+
+  params_ranges = {p: eval(p) for p in [&#39;max_depth&#39;,
+                                        &#39;min_samples_split&#39;,
+                                        &#39;min_samples_leaf&#39;,
+                                        &#39;max_features&#39;,
+                                        &#39;n_estimators&#39;,
+                                        &#39;bootstrap&#39;,
+                                        &#39;type&#39;]}
+
+  results = []
+  for params in gen_params(**params_ranges):
+    t = params.pop(&#39;type&#39;)
+    if t == &#39;RF&#39;:
+      RF = RandomForestRegressor(n_jobs = -1, random_state = 0, **params)
+    else:
+      RF = ExtraTreesRegressor(n_jobs = -1, random_state = 0, **params)
+    RF.fit(Xt, Yt)
+
+    params[&#39;AUCt&#39;] = roc_auc_score(Yt, RF.predict(Xt))
+    params[&#39;AUCv&#39;] = roc_auc_score(Yva, RF.predict(Xva))
+    params[&#39;type&#39;] = t
+    results.append(params)
+    if saveResults:
+      with open(&#39;experiments/&#39; + timestamp + &#39;.json&#39;, &#39;w&#39;) as f:
+        json.dump(results, f, indent = 2)
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>DBMS</title>
+      <link>/projects/dbms/</link>
+      <pubDate>Thu, 01 Dec 2016 00:00:00 +0000</pubDate>
+      <guid>/projects/dbms/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Language&lt;/strong&gt;: C++11&lt;/p&gt;
+
+&lt;p&gt;Built my own database management system from scratch, with the help of a teammate. This project was in the scope of the class &amp;ldquo;Principles of Data Management&amp;rdquo;, at UC Irvine, and was divided into the following parts:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Disk I/O Page-Based Manager&lt;/li&gt;
+&lt;li&gt;Record-Based File Manager&lt;/li&gt;
+&lt;li&gt;Relation Manager&lt;/li&gt;
+&lt;li&gt;Index Manager&lt;/li&gt;
+&lt;li&gt;Query Engine&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;1. The Disk I/O Page-Based Manager&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Provides higher-layered managers with tools to perform I/O operations in terms of pages (eg: open/close file, create/destroy file and read/write pages to the file).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;2. Record-Based File Manager&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Responsible for inserting, deleting and updating records within a given page-based file. Records are identified and located within a file by a pair &lt;code&gt;(pageNumber, recordSlot)&lt;/code&gt; called &lt;code&gt;RID&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;The attribute types supported are: &lt;code&gt;INT&lt;/code&gt;, &lt;code&gt;REAL&lt;/code&gt; and &lt;code&gt;VARHCAR(N)&lt;/code&gt;. Thus, variable-length records are possible.&lt;/li&gt;
+&lt;li&gt;It has the responsibility of managing the free space offset within a page and guarantee $O(1)$ time for accessing the $i^{th}$ attribute of the record. For this reason, both pages and records are encoded in disk with a specific format chosen by the manager itself.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;3. Relation Manager&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Responsible for managing the database tables (creating/deleting tables and inserting/removing tuples)&lt;/li&gt;
+&lt;li&gt;It keeps database schema in the system catalog, which is itself a table&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;4. Index Manager&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Implemented using a &lt;a href=&#34;https://en.wikipedia.org/wiki/B%2B_tree&#34; target=&#34;_blank&#34;&gt;B+ Tree&lt;/a&gt; that supports all the necessary operations: insertion, removal, key lookup and range scan.&lt;/li&gt;
+&lt;li&gt;Every node in the tree, intermediate or leaf node, corresponds to a page of size 4096 bytes and it must be at least half full &amp;ndash; requirement for B+ trees to reduce sparsity and fragmentation.&lt;/li&gt;
+&lt;li&gt;For simplicity, we don&amp;rsquo;t care about keeping the above property whenever deleting a record. This is because merging nodes is a complex task (splitting in insert are simpler) and deletes are not frequent.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;5. Query Engine&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Provides the functionality to answer SQL queries&lt;/li&gt;
+&lt;li&gt;The following relational operators were implemented:
+
+&lt;ul&gt;
+&lt;li&gt;Filter&lt;/li&gt;
+&lt;li&gt;Projection&lt;/li&gt;
+&lt;li&gt;Aggregate (with &amp;ldquo;Group by&amp;rdquo;)&lt;/li&gt;
+&lt;li&gt;Join, using:&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Block_nested_loop&#34; target=&#34;_blank&#34;&gt;Block-Nested Loop Join&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Index-Nested Loop Join&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

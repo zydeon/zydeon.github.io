@@ -23,12 +23,12 @@
   </url>
   
   <url>
-    <loc>/</loc>
+    <loc>/authors/pedro-matias/</loc>
     <lastmod>2020-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/pedro-matias/</loc>
+    <loc>/</loc>
     <lastmod>2020-01-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -95,6 +95,21 @@
   <url>
     <loc>/publication/2019-tracking/</loc>
     <lastmod>2019-08-22T23:01:18-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/projects/</loc>
+    <lastmod>2017-12-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/projects/rainfall-predictor/</loc>
+    <lastmod>2017-12-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/projects/dbms/</loc>
+    <lastmod>2016-12-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
