@@ -620,6 +620,64 @@ The result of the compilation is written to the file `result.c&lt;/p&gt;
     </item>
     
     <item>
+      <title>GL-TicTacToe</title>
+      <link>/projects/tic-tac-toe/</link>
+      <pubDate>Sat, 01 Jun 2013 00:00:00 +0000</pubDate>
+      <guid>/projects/tic-tac-toe/</guid>
+      <description>
+
+&lt;p&gt;Implementation from scratch of Tic-Tac-Toe in a 3D environment.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Frameworks:&lt;/strong&gt; OpenGL&lt;br /&gt;
+&lt;strong&gt;Language:&lt;/strong&gt;  C++&lt;/p&gt;
+
+&lt;h3 id=&#34;keys&#34;&gt;Keys&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;X&lt;/strong&gt;: switch player&lt;br /&gt;
+&lt;strong&gt;W&lt;/strong&gt;: ↑&lt;br /&gt;
+&lt;strong&gt;A&lt;/strong&gt;: ←&lt;br /&gt;
+&lt;strong&gt;S&lt;/strong&gt;: ↓&lt;br /&gt;
+&lt;strong&gt;D&lt;/strong&gt;: ➝&lt;br /&gt;
+&lt;strong&gt;Esc&lt;/strong&gt;: quit the game&lt;/p&gt;
+
+&lt;p&gt;For playing in the board:&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;T&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Y&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;U&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;strong&gt;G&lt;/strong&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;strong&gt;H&lt;/strong&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;strong&gt;J&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;strong&gt;B&lt;/strong&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;strong&gt;N&lt;/strong&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;strong&gt;M&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;img src=&#34;screenshot.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git clone git@github.com:zydeon/tictactoe.git
+$ cd tictactoe
+$ make
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
       <title>SocNet</title>
       <link>/projects/socnet/</link>
       <pubDate>Sat, 01 Dec 2012 00:00:00 +0000</pubDate>
