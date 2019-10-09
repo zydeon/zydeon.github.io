@@ -717,5 +717,16 @@ $ make
 </description>
     </item>
     
+    <item>
+      <title>Deflate</title>
+      <link>/projects/deflate/</link>
+      <pubDate>Thu, 01 Dec 2011 00:00:00 +0000</pubDate>
+      <guid>/projects/deflate/</guid>
+      <description>&lt;p&gt;Implementation of the &lt;a href=&#34;http://en.wikipedia.org/wiki/DEFLATE&#34; target=&#34;_blank&#34;&gt;Deflate&lt;/a&gt; algorithm for (de)compressing gzip files. Deflate is a data compression algorithm that uses &lt;a href=&#34;https://en.wikipedia.org/wiki/Adaptive_Huffman_coding&#34; target=&#34;_blank&#34;&gt;Adaptive Huffman Coding&lt;/a&gt; on top of &lt;a href=&#34;http://en.wikipedia.org/wiki/LZ77_and_LZ78&#34; target=&#34;_blank&#34;&gt;LZ77&lt;/a&gt;: the implemented Huffman trees encode the &amp;ldquo;encoding&amp;rdquo; given by LZ77.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Language&lt;/strong&gt;: C++&lt;/p&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>
