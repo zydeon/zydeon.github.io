@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Research | Pedro Matias</title>
+    <link>/tags/research/</link>
+      <atom:link href="/tags/research/index.xml" rel="self" type="application/rss+xml" />
+    <description>Research</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 01 Dec 2017 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>Research</title>
+      <link>/tags/research/</link>
+    </image>
+    
+    <item>
+      <title>Rainfall Predictor</title>
+      <link>/projects/rainfall-predictor/</link>
+      <pubDate>Fri, 01 Dec 2017 00:00:00 +0000</pubDate>
+      <guid>/projects/rainfall-predictor/</guid>
+      <description>
+
+&lt;p&gt;Designed and developed supervised Machine Learning models for predicting
+rainfall at a particular location. The project was carried out by 2 awesome
+teammates and myself, in hopes of getting a good grade on &lt;a href=&#34;http://sameersingh.org&#34; target=&#34;_blank&#34;&gt;Prof. Sameer
+Singh&lt;/a&gt;&amp;rsquo;s course of Machine Learning.&lt;/p&gt;
+
+&lt;h2 id=&#34;the-data&#34;&gt;The data&lt;/h2&gt;
+
+&lt;p&gt;Courtesy of the &lt;a href=&#34;http://chrs.web.uci.edu&#34; target=&#34;_blank&#34;&gt;UC Irvine Center for Hydrometeorology and Remote
+Sensing&lt;/a&gt;, our data consisted of satellite-based
+measurements of temperature at particular locations across the globe (infrared
+imaging) and information about clouds (such as area and average temperature).
+Each data point corresponded to a location on the globe (identified by its
+latitude, longitude and elevation) and was labeled with CHRS&amp;rsquo;s belief of whether
+that particular location will admit rain.&lt;/p&gt;
+
+&lt;h2 id=&#34;approaches&#34;&gt;Approaches&lt;/h2&gt;
+
+&lt;p&gt;We tried the following models:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Neural Networks and Deep Learning&lt;/li&gt;
+&lt;li&gt;Random Forests&lt;/li&gt;
+&lt;li&gt;Support Vector Machines&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Random Forests turned out to be the model scoring highest in validation AUC,
+with scores above 0.79. We used hold-out validation with a training fraction of
+80% of the data.&lt;/p&gt;
+
+&lt;p&gt;Experiments were carried out using &lt;code&gt;scikit-learn&lt;/code&gt;&amp;rsquo;s &lt;a href=&#34;https://scikit-learn.org/stable/modules/ensemble.html#forest&#34; target=&#34;_blank&#34;&gt;implementations&lt;/a&gt; of Random
+Forests (both &lt;code&gt;RandomForestRegressor&lt;/code&gt; and &lt;code&gt;ExtraTreesRegressor&lt;/code&gt;) and we
+experimented different configurations of the following parameters (see code at
+&lt;a href=&#34;#random-forests-code&#34;&gt;the end&lt;/a&gt;):&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;max_depth&lt;/code&gt;. The maximum depth on all the decision trees. If &lt;code&gt;None&lt;/code&gt;, the
+depth is unrestricted&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;min_samples_split&lt;/code&gt;. The minimum number of samples to split a node (e.g. minParent)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;min_samples_leaf&lt;/code&gt;. The minimum number of samples to form a leaf&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;max_features&lt;/code&gt;. The maximum size of the subsample of features considered in splitting&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;n_estimators&lt;/code&gt;. The number of decision trees generated&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;bootstrap&lt;/code&gt;. Either True or False. In &lt;code&gt;scikit-learn&lt;/code&gt;, the subsample of the data (drawn with or without replacement) will always have the size as the data itself&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;random-forest-results&#34;&gt;Random Forest Results&lt;/h2&gt;
+
+&lt;p&gt;In the end, an unlimited &lt;code&gt;max_depth&lt;/code&gt; together with small sizes of feature
+subsampling (&lt;code&gt;max_features&lt;/code&gt;=2) and a large number of decision trees
+(&lt;code&gt;n_estimators&lt;/code&gt;=300) turned out to be a very good configuration of params. The
+remaining parameters revealed little influence in validation AUC. See below for
+a plot of training and validation AUC&amp;rsquo;s varying &lt;code&gt;max_features&lt;/code&gt; and
+&lt;code&gt;n_estimators&lt;/code&gt;, with and without &lt;code&gt;bootstrap&lt;/code&gt;.&lt;/p&gt;
+
+&lt;figure&gt;
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;TrueRF.png&#34; data-caption=&#34;RandomForestRegressor with bootstrap, min_samples_split=min_samples_leaf=5 and max_depth=None.&#34;&gt;
+
+&lt;img src=&#34;TrueRF.png&#34; alt=&#34;`RandomForestRegressor` with `bootstrap`, `min_samples_split`=`min_samples_leaf`=5 and `max_depth`=`None`.&#34; &gt;
+&lt;/a&gt;
+
+
+&lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; &gt;
+  
+  &lt;p&gt;
+    &lt;code&gt;RandomForestRegressor&lt;/code&gt; with &lt;code&gt;bootstrap&lt;/code&gt;, &lt;code&gt;min_samples_split&lt;/code&gt;=&lt;code&gt;min_samples_leaf&lt;/code&gt;=5 and &lt;code&gt;max_depth&lt;/code&gt;=&lt;code&gt;None&lt;/code&gt;.
+    
+    
+    
+  &lt;/p&gt; 
+&lt;/figcaption&gt;
+
+&lt;/figure&gt;
+
+&lt;figure&gt;
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;FalseRF.png&#34; data-caption=&#34;RandomForestRegressor without bootstrap, min_samples_split=min_samples_leaf=5 and max_depth=None.&#34;&gt;
+
+&lt;img src=&#34;FalseRF.png&#34; alt=&#34;`RandomForestRegressor` without `bootstrap`, `min_samples_split`=`min_samples_leaf`=5 and `max_depth`=`None`.&#34; &gt;
+&lt;/a&gt;
+
+
+&lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; &gt;
+  
+  &lt;p&gt;
+    &lt;code&gt;RandomForestRegressor&lt;/code&gt; without &lt;code&gt;bootstrap&lt;/code&gt;, &lt;code&gt;min_samples_split&lt;/code&gt;=&lt;code&gt;min_samples_leaf&lt;/code&gt;=5 and &lt;code&gt;max_depth&lt;/code&gt;=&lt;code&gt;None&lt;/code&gt;.
+    
+    
+    
+  &lt;/p&gt; 
+&lt;/figcaption&gt;
+
+&lt;/figure&gt;
+
+&lt;p&gt;The following plots are similar to the ones above, but using
+&lt;code&gt;ExtraTreesRegressor&lt;/code&gt; instead, where in addition to using a random subset of splitting candidate features, it samples a random subsubset from this subset when evaluating the most discriminating splitting feature.&lt;/p&gt;
+
+&lt;figure&gt;
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;TrueExtraRF.png&#34; data-caption=&#34;RandomForestRegressor with bootstrap, min_samples_split=min_samples_leaf=5 and max_depth=None.&#34;&gt;
+
+&lt;img src=&#34;TrueExtraRF.png&#34; alt=&#34;`RandomForestRegressor` with `bootstrap`, `min_samples_split`=`min_samples_leaf`=5 and `max_depth`=`None`.&#34; &gt;
+&lt;/a&gt;
+
+
+&lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; &gt;
+  
+  &lt;p&gt;
+    &lt;code&gt;RandomForestRegressor&lt;/code&gt; with &lt;code&gt;bootstrap&lt;/code&gt;, &lt;code&gt;min_samples_split&lt;/code&gt;=&lt;code&gt;min_samples_leaf&lt;/code&gt;=5 and &lt;code&gt;max_depth&lt;/code&gt;=&lt;code&gt;None&lt;/code&gt;.
+    
+    
+    
+  &lt;/p&gt; 
+&lt;/figcaption&gt;
+
+&lt;/figure&gt;
+
+&lt;figure&gt;
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;FalseExtraRF.png&#34; data-caption=&#34;RandomForestRegressor without bootstrap, min_samples_split=min_samples_leaf=5 and max_depth=None.&#34;&gt;
+
+&lt;img src=&#34;FalseExtraRF.png&#34; alt=&#34;`RandomForestRegressor` without `bootstrap`, `min_samples_split`=`min_samples_leaf`=5 and `max_depth`=`None`.&#34; &gt;
+&lt;/a&gt;
+
+
+&lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; &gt;
+  
+  &lt;p&gt;
+    &lt;code&gt;RandomForestRegressor&lt;/code&gt; without &lt;code&gt;bootstrap&lt;/code&gt;, &lt;code&gt;min_samples_split&lt;/code&gt;=&lt;code&gt;min_samples_leaf&lt;/code&gt;=5 and &lt;code&gt;max_depth&lt;/code&gt;=&lt;code&gt;None&lt;/code&gt;.
+    
+    
+    
+  &lt;/p&gt; 
+&lt;/figcaption&gt;
+
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;random-forests-code&#34;&gt;Random Forests code&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# Consistent behavior
+np.random.seed(0)
+
+def loadData(filename):
+  &amp;quot;&amp;quot;&amp;quot; Load data from binary cache if possible for efficiency. &amp;quot;&amp;quot;&amp;quot;
+  f = os.path.splitext(filename)[0] + &#39;.npy&#39;
+  if os.path.isfile(f):
+    D = np.load(f)   # faster than genfromtxt
+  else:
+    D = np.genfromtxt(filename, delimiter = None)
+    np.save(f, D)
+  return D
+
+def gen_params(**params_ranges):
+  params_ranges = {k: [(k, v) for v in params_ranges[k]] for k in params_ranges}
+  return map(dict, itertools.product(*params_ranges.values()))
+
+
+if __name__ == &#39;__main__&#39;:
+  timestamp = str(int(time.time()))
+
+  # Prepare output folder for results
+  date = datetime.fromtimestamp(time.time()).strftime(&#39;%m-%d_%H-%M-%S&#39;)
+
+  # Data Loading
+  X = loadData(&#39;data/X_train.txt&#39;)
+  Y = loadData(&#39;data/Y_train.txt&#39;)
+  X, Y = ml.shuffleData(X,Y)
+  m, n = X.shape
+
+  Xtr, Xva, Ytr, Yva = ml.splitData(X, Y)
+  Xt, Yt = Xtr, Ytr
+
+  max_depth = [None]
+  min_samples_split = [10]
+  min_samples_leaf = [10]
+  max_features = [2]
+  n_estimators = [100]
+  bootstrap = [True]
+  type = [&#39;RF&#39;]
+
+  params_ranges = {p: eval(p) for p in [&#39;max_depth&#39;,
+                                        &#39;min_samples_split&#39;,
+                                        &#39;min_samples_leaf&#39;,
+                                        &#39;max_features&#39;,
+                                        &#39;n_estimators&#39;,
+                                        &#39;bootstrap&#39;,
+                                        &#39;type&#39;]}
+
+  results = []
+  for params in gen_params(**params_ranges):
+    t = params.pop(&#39;type&#39;)
+    if t == &#39;RF&#39;:
+      RF = RandomForestRegressor(n_jobs = -1, random_state = 0, **params)
+    else:
+      RF = ExtraTreesRegressor(n_jobs = -1, random_state = 0, **params)
+    RF.fit(Xt, Yt)
+
+    params[&#39;AUCt&#39;] = roc_auc_score(Yt, RF.predict(Xt))
+    params[&#39;AUCv&#39;] = roc_auc_score(Yva, RF.predict(Xva))
+    params[&#39;type&#39;] = t
+    results.append(params)
+    if saveResults:
+      with open(&#39;experiments/&#39; + timestamp + &#39;.json&#39;, &#39;w&#39;) as f:
+        json.dump(results, f, indent = 2)
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>MSc Thesis</title>
+      <link>/projects/msc-thesis/</link>
+      <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
+      <guid>/projects/msc-thesis/</guid>
+      <description>
+
+&lt;p&gt;The topic is &lt;em&gt;Improvements in the Non-Preemptive Speed Scaling Setting&lt;/em&gt; and the thesis is concerned with the design of algorithms that exploit the dynamic speed of non-preemptive processors to minimize energy consumption. For instance, energy is minimized when non-preemptive processors use the same speed throughout the execution of a job &amp;ndash; this follows from &lt;a href=&#34;https://en.wikipedia.org/wiki/Jensen%27s_inequality&#34; target=&#34;_blank&#34;&gt;Jensen&amp;rsquo;s inequality&lt;/a&gt;, depicted above.&lt;/p&gt;
+
+&lt;p&gt;This work is purely theoretical and research-oriented, so no implementations were made. Feel free to checkout my &lt;a href=&#34;thesis.pdf&#34; target=&#34;_blank&#34;&gt;thesis report&lt;/a&gt; or my presentation &lt;a href=&#34;https://docs.google.com/presentation/d/1wNyw-g2-Seo6U3VNrtBp4qgq-ZwZi87O4chK8Ac4wic/pub?start=false&amp;amp;loop=false&amp;amp;delayms=3000&#34; target=&#34;_blank&#34;&gt;slides&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;abstract&#34;&gt;Abstract&lt;/h3&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The speed scaling problem was first introduced by Yao, Demers and Shenker. It consists on finding a schedule of jobs that minimises the amount of energy that is necessary to execute them on a single variable-speed processor. Energy consumption is directly given by a convex function of the processor’s speed and each job must be fully executed within its lifetime, which is specified by its work volume, release time and deadline. In the original version of the problem, which is in P, the processor is preemptive. This setting has already been analysed to a great extent, including for multiple processors. Unfortunately, the non- preemptive version of the problem is strongly NP-hard and not so much is known in this variant. Hence, the present work doesn&amp;rsquo;t consider preemption.&lt;/p&gt;
+
+&lt;p&gt;The contributions of this thesis can be grouped into two parts. The main results of the first part (chapter 3) include (using a single processor): (i) a substantial improvement in the time complexity when all jobs have the same work volume and (ii) a proof that, when the number of jobs with unrestricted work volume is limited to a constant, the problem is still in P. The second part (chapter 4) presents and proves the correctness of an algorithm that solves a special instance of a different problem: scheduling with job assignment restrictions (first introduced by Muratore, Schwarz and Woeginger). The goal is to find a schedule of jobs that minimises the maximum job completion time, over a set of single-speed processors. Solving this problem might give some insight on how to solve the non-preemptive speed scaling problem.&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>MOSAL</title>
+      <link>/projects/mosal/</link>
+      <pubDate>Wed, 01 Jan 2014 00:00:00 +0000</pubDate>
+      <guid>/projects/mosal/</guid>
+      <description>
+
+&lt;p&gt;MOSAL (&lt;em&gt;MultiObjective Sequence Alignment&lt;/em&gt;) is a software tool that computes Pareto optimal alignments for bicriteria pairwise sequence alignment. Thus, it provides solutions for detailed analysis on the relations between two biological sequence, e.g. DNA and RNA.&lt;/p&gt;
+
+&lt;p&gt;For more information please take a look at &lt;a href=&#34;http://mosal.dei.uc.pt&#34; target=&#34;_blank&#34;&gt;http://mosal.dei.uc.pt&lt;/a&gt;.&lt;br /&gt;
+There is an online tool at &lt;a href=&#34;http://mosal.dei.uc.pt/align&#34; target=&#34;_blank&#34;&gt;http://mosal.dei.uc.pt/align&lt;/a&gt; that lets you align two sequences and visualize the results of the alignment (see screenshots below).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Language:&lt;/strong&gt; C&lt;/p&gt;
+
+&lt;h2 id=&#34;screenshots&#34;&gt;Screenshots&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;screenshot1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;screenshot2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;related-publications&#34;&gt;Related Publications&lt;/h2&gt;
+
+&lt;p&gt;[1] &amp;nbsp;&amp;nbsp; M. Abbasi, L. Paquete, A.Liefooghe, M. Pinheiro and P. Matias, &lt;a href=&#34;http://dx.doi.org/10.1093/bioinformatics/btt098&#34; target=&#34;_blank&#34;&gt;Improvements on bicriteria pairwise sequence alignment: algorithms and applications&lt;/a&gt;, &lt;em&gt;Bioinformatics&lt;/em&gt;, 29(8):996-1003, 2013.&lt;br /&gt;
+[2] &amp;nbsp;&amp;nbsp; L. Paquete, P. Matias, M. Abbasi, M. Pinheiro, &lt;a href=&#34;http://dx.doi.org/10.1186/1751-0473-9-2&#34; target=&#34;_blank&#34;&gt;MOSAL: Software tools for multiobjective sequence alignment&lt;/a&gt;, &lt;em&gt;Source Code for Biology and Medicine&lt;/em&gt;, 9(2), 2014.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
