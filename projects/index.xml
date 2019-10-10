@@ -312,6 +312,32 @@ if __name__ == &#39;__main__&#39;:
     </item>
     
     <item>
+      <title>Neural Network Art</title>
+      <link>/projects/nnart/</link>
+      <pubDate>Sun, 01 Jun 2014 00:00:00 +0000</pubDate>
+      <guid>/projects/nnart/</guid>
+      <description>
+
+&lt;p&gt;The research project &lt;em&gt;Aesthetics&lt;/em&gt;, from the research lab &lt;a href=&#34;https://cdv.dei.uc.pt&#34; target=&#34;_blank&#34;&gt;Computational Design and Visualization Lab&lt;/a&gt;, consisted on implementing ant colony algorithms and &lt;a href=&#34;https://en.wikipedia.org/wiki/Self-organizing_map&#34; target=&#34;_blank&#34;&gt;self-organizing maps&lt;/a&gt; (a special type of artificial neural networks), with a focus on creating art &amp;ndash; each ant leaves a trace that is determined via self-organizing maps.&lt;/p&gt;
+
+&lt;p&gt;This project was supervised by &lt;a href=&#34;http://fmachado.dei.uc.pt&#34; target=&#34;_blank&#34;&gt;Prof. Penousal Machado&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Language:&lt;/strong&gt; Processing and Java&lt;/p&gt;
+
+&lt;h2 id=&#34;class-diagram&#34;&gt;Class diagram&lt;/h2&gt;
+
+&lt;figure&gt;
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;class_diagram.png&#34; &gt;
+
+&lt;img src=&#34;class_diagram.png&#34; &gt;
+&lt;/a&gt;
+
+&lt;/figure&gt;
+</description>
+    </item>
+    
+    <item>
       <title>MOSAL</title>
       <link>/projects/mosal/</link>
       <pubDate>Wed, 01 Jan 2014 00:00:00 +0000</pubDate>
@@ -327,9 +353,23 @@ There is an online tool at &lt;a href=&#34;http://mosal.dei.uc.pt/align&#34; tar
 
 &lt;h2 id=&#34;screenshots&#34;&gt;Screenshots&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&#34;screenshot1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;figure&gt;
 
-&lt;p&gt;&lt;img src=&#34;screenshot2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;screenshot1.png&#34; &gt;
+
+&lt;img src=&#34;screenshot1.png&#34; &gt;
+&lt;/a&gt;
+
+&lt;/figure&gt;
+
+&lt;figure&gt;
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;screenshot2.png&#34; &gt;
+
+&lt;img src=&#34;screenshot2.png&#34; &gt;
+&lt;/a&gt;
+
+&lt;/figure&gt;
 
 &lt;h2 id=&#34;related-publications&#34;&gt;Related Publications&lt;/h2&gt;
 
@@ -714,7 +754,14 @@ The result of the compilation is written to the file `result.c&lt;/p&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;&lt;img src=&#34;screenshot.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;figure&gt;
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;screenshot.png&#34; &gt;
+
+&lt;img src=&#34;screenshot.png&#34; &gt;
+&lt;/a&gt;
+
+&lt;/figure&gt;
 
 &lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
 
@@ -739,9 +786,23 @@ $ make
 
 &lt;h2 id=&#34;screenshots&#34;&gt;Screenshots&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&#34;screenshot1.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;figure&gt;
 
-&lt;p&gt;&lt;img src=&#34;screenshot2.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;screenshot1.jpg&#34; &gt;
+
+&lt;img src=&#34;screenshot1.jpg&#34; &gt;
+&lt;/a&gt;
+
+&lt;/figure&gt;
+
+&lt;figure&gt;
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;screenshot2.jpg&#34; &gt;
+
+&lt;img src=&#34;screenshot2.jpg&#34; &gt;
+&lt;/a&gt;
+
+&lt;/figure&gt;
 </description>
     </item>
     
