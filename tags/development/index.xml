@@ -7,7 +7,7 @@
     <description>Development</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 01 Dec 2016 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/icon-192.png</url>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Development</title>
       <link>/tags/development/</link>
     </image>
@@ -18,9 +18,7 @@
       <pubDate>Thu, 01 Dec 2016 00:00:00 +0000</pubDate>
       <guid>/projects/dbms/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Language&lt;/strong&gt;: C++11&lt;/p&gt;
-
 &lt;p&gt;Built my own database management system from scratch, with the help of a teammate. This project was in the scope of the class &amp;ldquo;Principles of Data Management&amp;rdquo;, at UC Irvine, and was divided into the following parts:&lt;/p&gt;
-
 &lt;ol&gt;
 &lt;li&gt;Disk I/O Page-Based Manager&lt;/li&gt;
 &lt;li&gt;Record-Based File Manager&lt;/li&gt;
@@ -28,50 +26,45 @@
 &lt;li&gt;Index Manager&lt;/li&gt;
 &lt;li&gt;Query Engine&lt;/li&gt;
 &lt;/ol&gt;
-
 &lt;p&gt;&lt;strong&gt;1. The Disk I/O Page-Based Manager&lt;/strong&gt;&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;Provides higher-layered managers with tools to perform I/O operations in terms of pages (eg: open/close file, create/destroy file and read/write pages to the file).&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;&lt;strong&gt;2. Record-Based File Manager&lt;/strong&gt;&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;Responsible for inserting, deleting and updating records within a given page-based file. Records are identified and located within a file by a pair &lt;code&gt;(pageNumber, recordSlot)&lt;/code&gt; called &lt;code&gt;RID&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;The attribute types supported are: &lt;code&gt;INT&lt;/code&gt;, &lt;code&gt;REAL&lt;/code&gt; and &lt;code&gt;VARHCAR(N)&lt;/code&gt;. Thus, variable-length records are possible.&lt;/li&gt;
 &lt;li&gt;It has the responsibility of managing the free space offset within a page and guarantee $O(1)$ time for accessing the $i^{th}$ attribute of the record. For this reason, both pages and records are encoded in disk with a specific format chosen by the manager itself.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;&lt;strong&gt;3. Relation Manager&lt;/strong&gt;&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;Responsible for managing the database tables (creating/deleting tables and inserting/removing tuples)&lt;/li&gt;
 &lt;li&gt;It keeps database schema in the system catalog, which is itself a table&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;&lt;strong&gt;4. Index Manager&lt;/strong&gt;&lt;/p&gt;
-
 &lt;ul&gt;
-&lt;li&gt;Implemented using a &lt;a href=&#34;https://en.wikipedia.org/wiki/B%2B_tree&#34; target=&#34;_blank&#34;&gt;B+ Tree&lt;/a&gt; that supports all the necessary operations: insertion, removal, key lookup and range scan.&lt;/li&gt;
+&lt;li&gt;Implemented using a 
+&lt;a href=&#34;https://en.wikipedia.org/wiki/B%2B_tree&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;B+ Tree&lt;/a&gt; that supports all the necessary operations: insertion, removal, key lookup and range scan.&lt;/li&gt;
 &lt;li&gt;Every node in the tree, intermediate or leaf node, corresponds to a page of size 4096 bytes and it must be at least half full &amp;ndash; requirement for B+ trees to reduce sparsity and fragmentation.&lt;/li&gt;
 &lt;li&gt;For simplicity, we don&amp;rsquo;t care about keeping the above property whenever deleting a record. This is because merging nodes is a complex task (splitting in insert are simpler) and deletes are not frequent.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;&lt;strong&gt;5. Query Engine&lt;/strong&gt;&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;Provides the functionality to answer SQL queries&lt;/li&gt;
 &lt;li&gt;The following relational operators were implemented:
-
 &lt;ul&gt;
 &lt;li&gt;Filter&lt;/li&gt;
 &lt;li&gt;Projection&lt;/li&gt;
 &lt;li&gt;Aggregate (with &amp;ldquo;Group by&amp;rdquo;)&lt;/li&gt;
-&lt;li&gt;Join, using:&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Block_nested_loop&#34; target=&#34;_blank&#34;&gt;Block-Nested Loop Join&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Join, using:
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Block_nested_loop&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Block-Nested Loop Join&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Index-Nested Loop Join&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
@@ -81,30 +74,25 @@
       <link>/projects/pemo/</link>
       <pubDate>Sun, 01 Dec 2013 00:00:00 +0000</pubDate>
       <guid>/projects/pemo/</guid>
-      <description>&lt;p&gt;An XMPP Instant Messaging client &lt;a href=&#34;https://github.com/pontarius/pontarius-xmpp/&#34; target=&#34;_blank&#34;&gt;pontarius-xmpp&lt;/a&gt; using &lt;a href=&#34;http://jtdaugherty.github.io/vty-ui/&#34; target=&#34;_blank&#34;&gt;vty-ui&lt;/a&gt; as user interface. Includes support for Jabber.&lt;/p&gt;
-
+      <description>&lt;p&gt;An XMPP Instant Messaging client 
+&lt;a href=&#34;https://github.com/pontarius/pontarius-xmpp/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;pontarius-xmpp&lt;/a&gt; using 
+&lt;a href=&#34;http://jtdaugherty.github.io/vty-ui/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;vty-ui&lt;/a&gt; as user interface. Includes support for Jabber.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Language:&lt;/strong&gt; Haskell&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;strong&gt;Installation&lt;/strong&gt;&lt;br /&gt;
-&lt;code&gt;$ cabal sandbox init&lt;/code&gt;&lt;br /&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;Installation&lt;/strong&gt;&lt;br&gt;
+&lt;code&gt;$ cabal sandbox init&lt;/code&gt;&lt;br&gt;
 &lt;code&gt;$ cabal install&lt;/code&gt;&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Mac OSX:&lt;/strong&gt; In order to install text-icu, you need the C libraries: icuuc, icui18n, icudata
-
 &lt;ol&gt;
 &lt;li&gt;&lt;code&gt;$ brew install icu4c&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;$ cabal install text-icu --extra-include-dirs=/usr/local/Cellar/icu4c/53.1/include/ --extra-lib-dirs=/usr/local/Cellar/icu4c/53.1/lib&lt;/code&gt;
-&lt;br /&gt;&lt;/li&gt;
-&lt;/ol&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;$ cabal install text-icu --extra-include-dirs=/usr/local/Cellar/icu4c/53.1/include/ --extra-lib-dirs=/usr/local/Cellar/icu4c/53.1/lib&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;Or the equivalent using MacPorts.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Usage&lt;/strong&gt;&lt;br /&gt;
-&lt;code&gt;$ cabal configure&lt;/code&gt;&lt;br /&gt;
+&lt;p&gt;&lt;strong&gt;Usage&lt;/strong&gt;&lt;br&gt;
+&lt;code&gt;$ cabal configure&lt;/code&gt;&lt;br&gt;
 &lt;code&gt;$ cabal run&lt;/code&gt;&lt;/p&gt;
 </description>
     </item>
@@ -114,25 +102,16 @@
       <link>/projects/qccompiler/</link>
       <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
       <guid>/projects/qccompiler/</guid>
-      <description>
-
-&lt;p&gt;Design and implementation of a compiler from scratch, including:&lt;/p&gt;
-
+      <description>&lt;p&gt;Design and implementation of a compiler from scratch, including:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Lexical analysis&lt;/li&gt;
-&lt;li&gt;Syntactic analysis
-
-&lt;ol&gt;
+&lt;li&gt;Syntactic analysis&lt;/li&gt;
 &lt;li&gt;Abstract syntax tree (AST) construction&lt;/li&gt;
-&lt;/ol&gt;&lt;/li&gt;
 &lt;li&gt;Semantic analysis&lt;/li&gt;
 &lt;li&gt;Code generation&lt;/li&gt;
 &lt;/ol&gt;
-
 &lt;p&gt;It&amp;rsquo;s written in C and it compiles input files written in qC, a small subset of the language ANSI C (C89/C90). The generated code is in C, but very close to Assembly.&lt;/p&gt;
-
 &lt;h2 id=&#34;features-of-qc&#34;&gt;Features of qC&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;use variables and literals of types &lt;em&gt;character&lt;/em&gt; and &lt;em&gt;integer&lt;/em&gt; (both with signal)&lt;/li&gt;
 &lt;li&gt;function declarations/calls, with recursion support&lt;/li&gt;
@@ -148,9 +127,7 @@
 &lt;li&gt;conversion between integers and strings - operations &lt;em&gt;itoa&lt;/em&gt; and &lt;em&gt;atoi&lt;/em&gt;&lt;/li&gt;
 &lt;li&gt;comments of type /* &amp;hellip; */&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;tokens&#34;&gt;Tokens&lt;/h2&gt;
-
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -158,245 +135,198 @@
 &lt;th&gt;Meaning&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
-
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td align=&#34;right&#34;&gt;&lt;em&gt;ID&lt;/em&gt;&lt;/td&gt;
 &lt;td&gt;alphameric case sensitive sequences beginning with a letter where &amp;lsquo;_&amp;rsquo; is also allowed&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;right&#34;&gt;&lt;em&gt;INTLIT&lt;/em&gt;&lt;/td&gt;
 &lt;td&gt;sequence of digits without unnecessary left pad zeros&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;right&#34;&gt;&lt;em&gt;CHRLIT&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;single character (except newline or single quote) or &lt;em&gt;escape sequence&lt;/em&gt; (\n, \t, \, \&amp;lsquo;, \&amp;rdquo; and \0) between single quotes&lt;/td&gt;
+&lt;td&gt;single character (except newline or single quote) or &lt;em&gt;escape sequence&lt;/em&gt; (\n, \t, , &#39;, &amp;quot; and \0) between single quotes&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;right&#34;&gt;&lt;em&gt;STRLIT&lt;/em&gt;&lt;/td&gt;
 &lt;td&gt;sequence of characters (except newline or single quote) and/or escape sequences between double quotes&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;right&#34;&gt;&lt;em&gt;AMP&lt;/em&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;&amp;amp;&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;right&#34;&gt;&lt;em&gt;AND&lt;/em&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;&amp;amp;&amp;amp;&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;right&#34;&gt;&lt;em&gt;ASSIGN&lt;/em&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;=&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;right&#34;&gt;&lt;em&gt;AST&lt;/em&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;*&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;right&#34;&gt;&lt;em&gt;ATOI&lt;/em&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;atoi&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;right&#34;&gt;&lt;em&gt;CHAR&lt;/em&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;char&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;right&#34;&gt;&lt;em&gt;COMMA&lt;/em&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;,&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;right&#34;&gt;&lt;em&gt;DIV&lt;/em&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;/&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;right&#34;&gt;&lt;em&gt;ELSE&lt;/em&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;else&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;right&#34;&gt;&lt;em&gt;EQ&lt;/em&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;==&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;right&#34;&gt;&lt;em&gt;GE&lt;/em&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;&amp;gt;=&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;right&#34;&gt;&lt;em&gt;GT&lt;/em&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;&amp;gt;&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;right&#34;&gt;&lt;em&gt;IF&lt;/em&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;if&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;right&#34;&gt;&lt;em&gt;INT&lt;/em&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;int&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;right&#34;&gt;&lt;em&gt;ITOA&lt;/em&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;itoa&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;right&#34;&gt;&lt;em&gt;LBRACE&lt;/em&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;{&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;right&#34;&gt;&lt;em&gt;LE&lt;/em&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;&amp;lt;=&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;right&#34;&gt;&lt;em&gt;LPAR&lt;/em&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;(&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;right&#34;&gt;&lt;em&gt;LSQ&lt;/em&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;[&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;right&#34;&gt;&lt;em&gt;LT&lt;/em&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;&amp;lt;&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;right&#34;&gt;&lt;em&gt;MINUS&lt;/em&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;-&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;right&#34;&gt;&lt;em&gt;MOD&lt;/em&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;%&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;right&#34;&gt;&lt;em&gt;NE&lt;/em&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;!=&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;right&#34;&gt;&lt;em&gt;NOT&lt;/em&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;!&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;right&#34;&gt;&lt;em&gt;OR&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;`&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;||&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;right&#34;&gt;&lt;em&gt;PLUS&lt;/em&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;+&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;right&#34;&gt;&lt;em&gt;PRINTF&lt;/em&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;printf&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;right&#34;&gt;&lt;em&gt;RBRACE&lt;/em&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;}&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;right&#34;&gt;&lt;em&gt;RETURN&lt;/em&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;return&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;right&#34;&gt;&lt;em&gt;RPAR&lt;/em&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;)&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;right&#34;&gt;&lt;em&gt;RSQ&lt;/em&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;]&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;right&#34;&gt;&lt;em&gt;SEMI&lt;/em&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;;&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;right&#34;&gt;&lt;em&gt;WHILE&lt;/em&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;while&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;right&#34;&gt;&lt;em&gt;RESERVED&lt;/em&gt;&lt;/td&gt;
 &lt;td&gt;C keywords not used in qC&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-
 &lt;h2 id=&#34;grammar-ebnf-notation&#34;&gt;Grammar (EBNF notation)&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;Start&lt;/strong&gt;                → (FunctionDefinition | FunctionDeclaration | Declaration) {FunctionDefinition | FunctionDeclaration | Declaration}&lt;br /&gt;
-&lt;strong&gt;FunctionDefinition&lt;/strong&gt;   → TypeSpecifier FunctionDeclarator LBRACE {Declaration} {Statement} RBRACE&lt;br /&gt;
-&lt;strong&gt;FunctionDeclaration&lt;/strong&gt;  → TypeSpecifier FunctionDeclarator SEMI&lt;br /&gt;
-&lt;strong&gt;FunctionDeclarator&lt;/strong&gt;   → {AST} ID LPAR [ParameterList] RPAR&lt;br /&gt;
-&lt;strong&gt;ParameterList&lt;/strong&gt;        → ParameterDeclaration {COMMA ParameterDeclaration}&lt;br /&gt;
-&lt;strong&gt;ParameterDeclaration&lt;/strong&gt; → TypeSpecifier {AST} ID&lt;br /&gt;
-&lt;strong&gt;Declaration&lt;/strong&gt;          → TypeSpecifier Declarator {COMMA Declarator} SEMI&lt;br /&gt;
-&lt;strong&gt;TypeSpecifier&lt;/strong&gt;        → CHAR | INT&lt;br /&gt;
-&lt;strong&gt;Declarator&lt;/strong&gt;           → {AST} ID [LSQ INTLIT RSQ]&lt;br /&gt;
-&lt;strong&gt;Statement&lt;/strong&gt;            → [Expression] SEMI&lt;br /&gt;
-&lt;strong&gt;Statement&lt;/strong&gt;            → LBRACE {Statement} RBRACE&lt;br /&gt;
-&lt;strong&gt;Statement&lt;/strong&gt;            → IF LPAR Expression RPAR Statement [ELSE Statement]&lt;br /&gt;
-&lt;strong&gt;Statement&lt;/strong&gt;            → WHILE LPAR Expression RPAR Statement&lt;br /&gt;
-&lt;strong&gt;Statement&lt;/strong&gt;            → RETURN Expression SEMI&lt;br /&gt;
-&lt;strong&gt;Expression&lt;/strong&gt;           → Expression ASSIGN Expression&lt;br /&gt;
-&lt;strong&gt;Expression&lt;/strong&gt;           → Expression (AND | OR) Expression&lt;br /&gt;
-&lt;strong&gt;Expression&lt;/strong&gt;           → Expression (EQ | NE | LT | GT | LE | GE) Expression&lt;br /&gt;
-&lt;strong&gt;Expression&lt;/strong&gt;           → Expression (PLUS | MINUS | AST | DIV | MOD) Expression&lt;br /&gt;
-&lt;strong&gt;Expression&lt;/strong&gt;           → (AMP | AST | PLUS | MINUS | NOT) Expression&lt;br /&gt;
-&lt;strong&gt;Expression&lt;/strong&gt;           → Expression LSQ Expression RSQ&lt;br /&gt;
-&lt;strong&gt;Expression&lt;/strong&gt;           → ID LPAR [Expression {COMMA Expression}] RPAR&lt;br /&gt;
-&lt;strong&gt;Expression&lt;/strong&gt;           → (PRINTF | ATOI) LPAR Expression RPAR&lt;br /&gt;
-&lt;strong&gt;Expression&lt;/strong&gt;           → ITOA LPAR Expression COMMA Expression RPAR&lt;br /&gt;
+&lt;p&gt;&lt;strong&gt;Start&lt;/strong&gt;                → (FunctionDefinition | FunctionDeclaration | Declaration) {FunctionDefinition | FunctionDeclaration | Declaration}&lt;br&gt;
+&lt;strong&gt;FunctionDefinition&lt;/strong&gt;   → TypeSpecifier FunctionDeclarator LBRACE {Declaration} {Statement} RBRACE&lt;br&gt;
+&lt;strong&gt;FunctionDeclaration&lt;/strong&gt;  → TypeSpecifier FunctionDeclarator SEMI&lt;br&gt;
+&lt;strong&gt;FunctionDeclarator&lt;/strong&gt;   → {AST} ID LPAR [ParameterList] RPAR&lt;br&gt;
+&lt;strong&gt;ParameterList&lt;/strong&gt;        → ParameterDeclaration {COMMA ParameterDeclaration}&lt;br&gt;
+&lt;strong&gt;ParameterDeclaration&lt;/strong&gt; → TypeSpecifier {AST} ID&lt;br&gt;
+&lt;strong&gt;Declaration&lt;/strong&gt;          → TypeSpecifier Declarator {COMMA Declarator} SEMI&lt;br&gt;
+&lt;strong&gt;TypeSpecifier&lt;/strong&gt;        → CHAR | INT&lt;br&gt;
+&lt;strong&gt;Declarator&lt;/strong&gt;           → {AST} ID [LSQ INTLIT RSQ]&lt;br&gt;
+&lt;strong&gt;Statement&lt;/strong&gt;            → [Expression] SEMI&lt;br&gt;
+&lt;strong&gt;Statement&lt;/strong&gt;            → LBRACE {Statement} RBRACE&lt;br&gt;
+&lt;strong&gt;Statement&lt;/strong&gt;            → IF LPAR Expression RPAR Statement [ELSE Statement]&lt;br&gt;
+&lt;strong&gt;Statement&lt;/strong&gt;            → WHILE LPAR Expression RPAR Statement&lt;br&gt;
+&lt;strong&gt;Statement&lt;/strong&gt;            → RETURN Expression SEMI&lt;br&gt;
+&lt;strong&gt;Expression&lt;/strong&gt;           → Expression ASSIGN Expression&lt;br&gt;
+&lt;strong&gt;Expression&lt;/strong&gt;           → Expression (AND | OR) Expression&lt;br&gt;
+&lt;strong&gt;Expression&lt;/strong&gt;           → Expression (EQ | NE | LT | GT | LE | GE) Expression&lt;br&gt;
+&lt;strong&gt;Expression&lt;/strong&gt;           → Expression (PLUS | MINUS | AST | DIV | MOD) Expression&lt;br&gt;
+&lt;strong&gt;Expression&lt;/strong&gt;           → (AMP | AST | PLUS | MINUS | NOT) Expression&lt;br&gt;
+&lt;strong&gt;Expression&lt;/strong&gt;           → Expression LSQ Expression RSQ&lt;br&gt;
+&lt;strong&gt;Expression&lt;/strong&gt;           → ID LPAR [Expression {COMMA Expression}] RPAR&lt;br&gt;
+&lt;strong&gt;Expression&lt;/strong&gt;           → (PRINTF | ATOI) LPAR Expression RPAR&lt;br&gt;
+&lt;strong&gt;Expression&lt;/strong&gt;           → ITOA LPAR Expression COMMA Expression RPAR&lt;br&gt;
 &lt;strong&gt;Expression&lt;/strong&gt;           → ID | INTLIT | CHRLIT | STRLIT | LPAR Expression RPAR&lt;/p&gt;
-
 &lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
-
 &lt;pre&gt;&lt;code&gt;$ make
 $ ./qccompiler [OPTIONS] &amp;lt; input.qc
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;h3 id=&#34;options&#34;&gt;Options:&lt;/h3&gt;
-
-&lt;p&gt;&lt;code&gt;-t&lt;/code&gt; &amp;nbsp; &amp;nbsp;  print the abstract syntax tree and stop after syntatic analysis.&lt;br /&gt;
-&lt;code&gt;-s&lt;/code&gt; &amp;nbsp; &amp;nbsp;  print the symbol table and stop after semantic analisys.&lt;br /&gt;
-&lt;code&gt;-c&lt;/code&gt; &amp;nbsp; &amp;nbsp;  allways compile the program (unless errors occur).&lt;br /&gt;
-&lt;code&gt;-o&lt;/code&gt; &amp;nbsp; &amp;nbsp;  allways compile the program (unless errors occur) and print compiled program to file.&lt;/p&gt;
-
+&lt;p&gt;&lt;code&gt;-t&lt;/code&gt;      print the abstract syntax tree and stop after syntatic analysis.&lt;br&gt;
+&lt;code&gt;-s&lt;/code&gt;      print the symbol table and stop after semantic analisys.&lt;br&gt;
+&lt;code&gt;-c&lt;/code&gt;      allways compile the program (unless errors occur).&lt;br&gt;
+&lt;code&gt;-o&lt;/code&gt;      allways compile the program (unless errors occur) and print compiled program to file.&lt;/p&gt;
 &lt;p&gt;If both flags &lt;code&gt;-s&lt;/code&gt; and &lt;code&gt;-t&lt;/code&gt; are set, the proccess stops after the semantic analysis.
 The result of the compilation is written to the file `result.c&lt;/p&gt;
-
 &lt;h2 id=&#34;dependencies&#34;&gt;Dependencies&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;flex&lt;/li&gt;
 &lt;li&gt;yacc&lt;/li&gt;
@@ -410,24 +340,17 @@ The result of the compilation is written to the file `result.c&lt;/p&gt;
       <link>/projects/tic-tac-toe/</link>
       <pubDate>Sat, 01 Jun 2013 00:00:00 +0000</pubDate>
       <guid>/projects/tic-tac-toe/</guid>
-      <description>
-
-&lt;p&gt;Implementation from scratch of Tic-Tac-Toe in a 3D environment.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Frameworks:&lt;/strong&gt; OpenGL&lt;br /&gt;
+      <description>&lt;p&gt;Implementation from scratch of Tic-Tac-Toe in a 3D environment.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Frameworks:&lt;/strong&gt; OpenGL&lt;br&gt;
 &lt;strong&gt;Language:&lt;/strong&gt;  C++&lt;/p&gt;
-
 &lt;h3 id=&#34;keys&#34;&gt;Keys&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;X&lt;/strong&gt;: switch player&lt;br /&gt;
-&lt;strong&gt;W&lt;/strong&gt;: ↑&lt;br /&gt;
-&lt;strong&gt;A&lt;/strong&gt;: ←&lt;br /&gt;
-&lt;strong&gt;S&lt;/strong&gt;: ↓&lt;br /&gt;
-&lt;strong&gt;D&lt;/strong&gt;: ➝&lt;br /&gt;
+&lt;p&gt;&lt;strong&gt;X&lt;/strong&gt;: switch player&lt;br&gt;
+&lt;strong&gt;W&lt;/strong&gt;: ↑&lt;br&gt;
+&lt;strong&gt;A&lt;/strong&gt;: ←&lt;br&gt;
+&lt;strong&gt;S&lt;/strong&gt;: ↓&lt;br&gt;
+&lt;strong&gt;D&lt;/strong&gt;: ➝&lt;br&gt;
 &lt;strong&gt;Esc&lt;/strong&gt;: quit the game&lt;/p&gt;
-
 &lt;p&gt;For playing in the board:&lt;/p&gt;
-
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -436,14 +359,12 @@ The result of the compilation is written to the file `result.c&lt;/p&gt;
 &lt;th align=&#34;center&#34;&gt;U&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
-
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td align=&#34;center&#34;&gt;&lt;strong&gt;G&lt;/strong&gt;&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;&lt;strong&gt;H&lt;/strong&gt;&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;&lt;strong&gt;J&lt;/strong&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;center&#34;&gt;&lt;strong&gt;B&lt;/strong&gt;&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;&lt;strong&gt;N&lt;/strong&gt;&lt;/td&gt;
@@ -451,18 +372,12 @@ The result of the compilation is written to the file `result.c&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-
-&lt;figure&gt;
-
-  &lt;a data-fancybox=&#34;&#34; href=&#34;screenshot.png&#34; &gt;
-
-&lt;img src=&#34;screenshot.png&#34; &gt;
+&lt;figure &gt;
+&lt;p&gt;&lt;a data-fancybox=&#34;&#34; href=&#34;/projects/tic-tac-toe/screenshot_huef339659dba34d0378b8a69f5418af27_726785_2000x2000_fit_lanczos_2.png&#34; &gt;&lt;/p&gt;
+  &lt;img data-src=&#34;/projects/tic-tac-toe/screenshot_huef339659dba34d0378b8a69f5418af27_726785_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;914&#34; height=&#34;736&#34;&gt;
 &lt;/a&gt;
-
 &lt;/figure&gt;
-
 &lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
-
 &lt;pre&gt;&lt;code&gt;$ git clone git@github.com:zydeon/tictactoe.git
 $ cd tictactoe
 $ make
@@ -475,31 +390,21 @@ $ make
       <link>/projects/coimbratechscene/</link>
       <pubDate>Sat, 01 Dec 2012 00:00:00 +0000</pubDate>
       <guid>/projects/coimbratechscene/</guid>
-      <description>
-
-&lt;p&gt;Online directory of all of the technology companies situated in Coimbra, Portugal.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Website:&lt;/strong&gt; &lt;a href=&#34;http://coimbratechscene.pt.vu&#34; target=&#34;_blank&#34;&gt;coimbratechscene.pt.vu&lt;/a&gt;&lt;br /&gt;
-&lt;strong&gt;Frameworks:&lt;/strong&gt; &lt;a href=&#34;https://www.djangoproject.com/&#34; target=&#34;_blank&#34;&gt;Django&lt;/a&gt;&lt;/p&gt;
-
+      <description>&lt;p&gt;Online directory of all of the technology companies situated in Coimbra, Portugal.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Website:&lt;/strong&gt; 
+&lt;a href=&#34;http://coimbratechscene.pt.vu&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;coimbratechscene.pt.vu&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Frameworks:&lt;/strong&gt; 
+&lt;a href=&#34;https://www.djangoproject.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Django&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;screenshots&#34;&gt;Screenshots&lt;/h2&gt;
-
-&lt;figure&gt;
-
-  &lt;a data-fancybox=&#34;&#34; href=&#34;screenshot1.jpg&#34; &gt;
-
-&lt;img src=&#34;screenshot1.jpg&#34; &gt;
+&lt;figure &gt;
+&lt;p&gt;&lt;a data-fancybox=&#34;&#34; href=&#34;/projects/coimbratechscene/screenshot1_hud2dd07818a8719ad763a4d14de87fb91_119515_2000x2000_fit_q90_lanczos.jpg&#34; &gt;&lt;/p&gt;
+  &lt;img data-src=&#34;/projects/coimbratechscene/screenshot1_hud2dd07818a8719ad763a4d14de87fb91_119515_2000x2000_fit_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;924&#34; height=&#34;518&#34;&gt;
 &lt;/a&gt;
-
 &lt;/figure&gt;
-
-&lt;figure&gt;
-
-  &lt;a data-fancybox=&#34;&#34; href=&#34;screenshot2.jpg&#34; &gt;
-
-&lt;img src=&#34;screenshot2.jpg&#34; &gt;
+&lt;figure &gt;
+&lt;p&gt;&lt;a data-fancybox=&#34;&#34; href=&#34;/projects/coimbratechscene/screenshot2_hu9cea80489aa826bbfdb53179f2536569_190758_2000x2000_fit_q90_lanczos.jpg&#34; &gt;&lt;/p&gt;
+  &lt;img data-src=&#34;/projects/coimbratechscene/screenshot2_hu9cea80489aa826bbfdb53179f2536569_190758_2000x2000_fit_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1049&#34; height=&#34;632&#34;&gt;
 &lt;/a&gt;
-
 &lt;/figure&gt;
 </description>
     </item>
@@ -509,12 +414,8 @@ $ make
       <link>/projects/socnet/</link>
       <pubDate>Sat, 01 Dec 2012 00:00:00 +0000</pubDate>
       <guid>/projects/socnet/</guid>
-      <description>
-
-&lt;p&gt;A social network application with integration with Facebook &lt;strong&gt;REST&lt;/strong&gt; API and updates in real-time for users social activity, by making use of &lt;strong&gt;WebSockets&lt;/strong&gt;.&lt;/p&gt;
-
+      <description>&lt;p&gt;A social network application with integration with Facebook &lt;strong&gt;REST&lt;/strong&gt; API and updates in real-time for users social activity, by making use of &lt;strong&gt;WebSockets&lt;/strong&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;Register user&lt;/li&gt;
 &lt;li&gt;Login user&lt;/li&gt;
@@ -529,13 +430,9 @@ $ make
 &lt;li&gt;When a post is deleted, it&amp;rsquo;s deleted on Facebook.&lt;/li&gt;
 &lt;li&gt;When a reply is made, it&amp;rsquo;s added on Facebook.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;overall-architecture&#34;&gt;Overall architecture&lt;/h2&gt;
-
 &lt;p&gt;The application uses 2 servers and 3 types of client: TCP, RMI (Remote Method Invocation, and HTTP. See the diagram above.&lt;/p&gt;
-
 &lt;h2 id=&#34;pre-requisites&#34;&gt;Pre-requisites&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;JDBC driver&lt;/li&gt;
 &lt;li&gt;Apache Tomcat&lt;/li&gt;
@@ -549,8 +446,10 @@ $ make
       <link>/projects/deflate/</link>
       <pubDate>Thu, 01 Dec 2011 00:00:00 +0000</pubDate>
       <guid>/projects/deflate/</guid>
-      <description>&lt;p&gt;Implementation of the &lt;a href=&#34;http://en.wikipedia.org/wiki/DEFLATE&#34; target=&#34;_blank&#34;&gt;Deflate&lt;/a&gt; algorithm for (de)compressing gzip files. Deflate is a data compression algorithm that uses &lt;a href=&#34;https://en.wikipedia.org/wiki/Adaptive_Huffman_coding&#34; target=&#34;_blank&#34;&gt;Adaptive Huffman Coding&lt;/a&gt; on top of &lt;a href=&#34;http://en.wikipedia.org/wiki/LZ77_and_LZ78&#34; target=&#34;_blank&#34;&gt;LZ77&lt;/a&gt;: the implemented Huffman trees encode the &amp;ldquo;encoding&amp;rdquo; given by LZ77.&lt;/p&gt;
-
+      <description>&lt;p&gt;Implementation of the 
+&lt;a href=&#34;http://en.wikipedia.org/wiki/DEFLATE&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Deflate&lt;/a&gt; algorithm for (de)compressing gzip files. Deflate is a data compression algorithm that uses 
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Adaptive_Huffman_coding&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Adaptive Huffman Coding&lt;/a&gt; on top of 
+&lt;a href=&#34;http://en.wikipedia.org/wiki/LZ77_and_LZ78&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LZ77&lt;/a&gt;: the implemented Huffman trees encode the &amp;ldquo;encoding&amp;rdquo; given by LZ77.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Language&lt;/strong&gt;: C++&lt;/p&gt;
 </description>
     </item>
